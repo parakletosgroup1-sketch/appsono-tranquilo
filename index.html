@@ -213,6 +213,16 @@ label.f{display:block;font-size:13px;font-weight:600;color:var(--tx2);margin:14p
 [data-theme=light] input[type=range]::-webkit-slider-thumb{border-color:#fff}
 /* player, filminho e luz são sempre escuros */
 .player{--moon:#ffd36b;--acc-tx:#1f2b4d;--tx:#eef1fb;--tx2:#a9b3d6;--tx3:#7c87b0;--card:#1d2747;--card2:#26325a;--line:#2f3c68}
+
+/* instalar */
+.instw{padding-top:10px}
+.iicon{width:84px;height:84px;margin:6px auto 14px;border-radius:24px;background:radial-gradient(circle at 35% 35%,#fff1c2,#ffd36b 45%,#ffb84d);display:grid;place-items:center;font-size:42px;box-shadow:0 0 40px #ffd36b66}
+.ist{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line)}.ist:last-of-type{border:0}
+.isn{flex:none;width:30px;height:30px;border-radius:50%;background:var(--moon);color:var(--acc-tx);font-weight:700;display:grid;place-items:center}
+.ist b{display:block;font-size:15px;line-height:1.35}.ist small{display:block;color:var(--tx2);font-size:12.5px;margin-top:2px}
+.iarrow{text-align:center;font-size:13px;font-weight:600;color:var(--moon);margin-top:12px;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.instcard{text-decoration:none;color:inherit;border-color:var(--moon)!important}
 </style>
 </head>
 <body>
@@ -860,8 +870,8 @@ function renderOnboarding() {
     </div>
     <button class="muted small" id="oskip" style="margin:6px auto">Pular por enquanto</button>
   </div>`;
-  $('#ogo').onclick = () => { S.perfil = { nome: $('#onome').value.trim(), nasc: $('#onasc').value }; save('perfil'); go('inicio'); render(); };
-  $('#oskip').onclick = () => { S.perfil = { nome: '', nasc: '' }; save('perfil'); go('inicio'); render(); };
+  $('#ogo').onclick = () => { S.perfil = { nome: $('#onome').value.trim(), nasc: $('#onasc').value }; save('perfil'); go(instalado() ? 'inicio' : 'instalar'); render(); };
+  $('#oskip').onclick = () => { S.perfil = { nome: '', nasc: '' }; save('perfil'); go(instalado() ? 'inicio' : 'instalar'); render(); };
 }
 
 /* ---------- INÍCIO ---------- */
@@ -888,6 +898,7 @@ routes.inicio = () => {
 
   ${sug ? `<div class="note" style="margin-bottom:14px">⏰ ${sug}</div>` : ''}
 
+  ${!instalado() && !DB.get('instOk', false) ? `<a class="card row instcard" href="#instalar"><div style="font-size:30px">📲</div><div style="flex:1"><h3>Instale o app no celular</h3><div class="small muted">Fica na tela inicial e funciona sem internet. Leva 10 segundos.</div></div><span class="go">›</span></a>` : ''}
   <div id="homeFoto"></div>
   <div class="grid2">
     <button class="qa" onclick="startRotina('noite')"><span class="e">👐</span><b>Massagem da noite</b><small>10 min guiados, passo a passo</small></button>
@@ -1228,7 +1239,32 @@ function applyTheme() { const t = temaAtual(); if (document.documentElement.data
 setInterval(applyTheme, 60000);
 let deferredPrompt = null;
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; });
-function instalar() { if (!deferredPrompt) return; deferredPrompt.prompt(); deferredPrompt = null; }
+async function instalar() { if (!deferredPrompt) return; deferredPrompt.prompt(); try { const r = await deferredPrompt.userChoice; if (r.outcome === 'accepted') { DB.set('instOk', true); toast('App instalado! 🌙'); go('inicio'); } } catch (e) {} deferredPrompt = null; }
+window.addEventListener('beforeinstallprompt', () => { if (location.hash === '#instalar') render(); });
+window.addEventListener('appinstalled', () => { DB.set('instOk', true); });
+function instalado() { try { return matchMedia('(display-mode: standalone)').matches || navigator.standalone === true; } catch (e) { return false; } }
+function plataforma() { const u = navigator.userAgent; const ios = /iphone|ipad|ipod/i.test(u) || (/Macintosh/.test(u) && navigator.maxTouchPoints > 1);
+  const inapp = /FBAN|FBAV|Instagram|Line\/|TikTok|musical_ly|Snapchat/i.test(u); return { ios, inapp, android: /android/i.test(u), safari: ios && /Safari/i.test(u) && !/CriOS|FxiOS|EdgiOS/i.test(u) }; }
+const ICO_SHARE = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-5px"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 12v8h14v-8"/></svg>';
+const ICO_ADD = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="vertical-align:-5px"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v8M8 12h8"/></svg>';
+routes.instalar = () => {
+  if (instalado()) { setTimeout(() => go('inicio')); return ''; }
+  const p = plataforma(), passo = (n, t, d) => `<div class="ist"><span class="isn">${n}</span><div><b>${t}</b>${d ? `<small>${d}</small>` : ''}</div></div>`;
+  let corpo;
+  if (p.inapp) corpo = `<div class="warn" style="margin-bottom:14px">Você abriu o link dentro de outro aplicativo. Para instalar, abra no ${p.ios ? 'Safari' : 'Chrome'}:</div>
+    ${passo(1, 'Toque nos 3 pontinhos (⋯) no canto da tela')}${passo(2, `Escolha "Abrir no ${p.ios ? 'Safari' : 'navegador'}"`)}${passo(3, 'Lá, volte aqui e siga o passo a passo')}`;
+  else if (p.ios) corpo = `${!p.safari ? `<div class="warn" style="margin-bottom:14px">No iPhone, o jeito mais fácil é pelo <b>Safari</b>. Se não aparecer a opção, copie o link e abra no Safari.</div>` : ''}
+    ${passo(1, `Toque no botão Compartilhar ${ICO_SHARE}`, 'Fica na barra de baixo do Safari (ou em cima, no iPad)')}
+    ${passo(2, `Role e toque em "Adicionar à Tela de Início" ${ICO_ADD}`, 'Se não aparecer, toque em "Editar ações" e ative')}
+    ${passo(3, 'Toque em "Adicionar"', 'Pronto! O ícone da lua aparece na sua tela')}
+    <div class="iarrow">👇 O botão Compartilhar fica aqui embaixo</div>`;
+  else if (deferredPrompt) corpo = `<button class="btn block" style="font-size:17px;padding:16px" onclick="instalar()">📲 Instalar o Noite Tranquila</button><p class="tiny" style="text-align:center;margin-top:8px">Depois é só confirmar em "Instalar".</p>`;
+  else corpo = `${passo(1, 'Toque nos 3 pontinhos (⋮) do Chrome', 'No canto de cima, à direita')}${passo(2, 'Toque em "Instalar app" ou "Adicionar à tela inicial"')}${passo(3, 'Confirme em "Instalar"', 'Pronto! O ícone da lua aparece na sua tela')}`;
+  return `<div class="instw"><div class="iicon">🌙</div><h1 style="text-align:center">Coloque o Noite Tranquila na sua tela</h1>
+  <p class="muted" style="text-align:center;margin:8px 0 18px">Assim ele abre como um aplicativo, em tela cheia, e funciona até sem internet, no meio da madrugada.</p>
+  <div class="card">${corpo}</div>
+  <button class="muted small" style="display:block;margin:10px auto;padding:8px" onclick="go('inicio')">Fazer isso depois</button></div>`;
+};
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && ($('#player') || $('.nightlight'))) wakeOn(); });
 if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
 
