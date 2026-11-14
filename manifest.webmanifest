@@ -1,0 +1,30 @@
+{
+ "name": "Noite Tranquila · Chef Nanna",
+ "short_name": "Noite Tranquila",
+ "description": "Massagens, cantigas e técnicas para o sono do bebê",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#121a31",
+ "theme_color": "#121a31",
+ "lang": "pt-BR",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}

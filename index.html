@@ -1,0 +1,1457 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Noite Tranquila · Chef Nanna</title>
+<meta name="description" content="Massagens do mundo todo, cantigas e técnicas para o sono do bebê.">
+<meta name="theme-color" content="#121a31">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Noite Tranquila">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>:root{--acc-tx:#1f2b4d;--bg:#121a31;--bg2:#0d1428;--card:#1d2747;--card2:#26325a;--line:#2f3c68;--tx:#eef1fb;--tx2:#a9b3d6;--tx3:#7c87b0;--moon:#ffd36b;--moon2:#ffb84d;--rose:#ff8fab;--mint:#7fe0c3;--sky:#8ab4ff;--skin:#f6d2b8;--skin2:#e8b896;--shadow:0 6px 24px rgba(0,0,0,.35);--r:18px}
+[data-theme=light]{--bg:#fbf7f0;--bg2:#f3ece0;--card:#fff;--card2:#f6f0e6;--line:#eadfcd;--tx:#1f2b4d;--tx2:#55607f;--tx3:#8a93ad;--moon:#2b6a58;--moon2:#e8590c;--rose:#e2557d;--mint:#16a34a;--sky:#3b6fd6;--acc-tx:#fff;--shadow:0 6px 20px rgba(31,43,77,.08)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--tx);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:15px;line-height:1.5}
+body{min-height:100vh;overscroll-behavior-y:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+input,select,textarea{font:inherit;color:var(--tx);background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+h1,h2,h3,h4{margin:0;line-height:1.25;font-weight:700}
+h1{font-size:24px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
+p{margin:0 0 10px}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.55;background-image:radial-gradient(1.5px 1.5px at 20% 12%,#fff8,transparent),radial-gradient(1px 1px at 70% 8%,#fff9,transparent),radial-gradient(1.2px 1.2px at 85% 30%,#fff6,transparent),radial-gradient(1px 1px at 40% 25%,#fff7,transparent),radial-gradient(1.4px 1.4px at 10% 40%,#fff5,transparent),radial-gradient(1px 1px at 60% 45%,#fff5,transparent),radial-gradient(1px 1px at 92% 60%,#fff4,transparent)}
+[data-theme=light] .stars{display:none}
+#app{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:0 16px calc(150px + env(safe-area-inset-bottom))}
+header.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top)) 0 10px;background:linear-gradient(var(--bg) 75%,transparent)}
+header.top .brand{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
+header.top .brand b{font-size:17px;display:block}
+header.top .brand small{display:block;color:var(--tx3);font-size:11px;margin-top:-2px}
+.moonlogo{width:38px;height:38px;border-radius:12px;background:radial-gradient(circle at 35% 35%,#ffd36b,#ffb84d);display:grid;place-items:center;font-size:20px;box-shadow:0 0 18px #ffd36b55;flex:none}
+.iconbtn{color:var(--tx);width:42px;height:42px;border-radius:14px;background:var(--card);display:grid;place-items:center;font-size:19px;flex:none}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--tx2);font-weight:600;padding:6px 0;margin-bottom:6px}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bg2);border-top:1px solid var(--line);display:flex;justify-content:center;padding:6px 6px calc(6px + env(safe-area-inset-bottom))}
+nav.tabs .in{display:flex;width:100%;max-width:560px}
+nav.tabs a{flex:1;min-width:0;text-align:center;text-decoration:none;color:var(--tx3);font-size:10.5px;font-weight:600;padding:4px 0;border-radius:12px}
+nav.tabs a span{display:block;font-size:22px;line-height:1.2;filter:grayscale(.6);opacity:.75}
+nav.tabs a.on{color:var(--moon)}nav.tabs a.on span{filter:none;opacity:1}
+.mini{position:fixed;left:0;right:0;bottom:calc(64px + env(safe-area-inset-bottom));z-index:39;display:none;justify-content:center;padding:0 12px}
+.mini.show{display:flex}
+.mini .in{width:100%;max-width:536px;background:var(--card2);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;padding:8px 10px}
+.mini .eq{width:34px;height:34px;border-radius:10px;background:var(--moon);display:flex;align-items:flex-end;justify-content:center;gap:3px;padding:8px 7px;flex:none}
+.mini .eq i{display:block;width:4px;background:var(--acc-tx);border-radius:2px;animation:eq 1s ease-in-out infinite}
+.mini .eq i:nth-child(2){animation-delay:.2s}.mini .eq i:nth-child(3){animation-delay:.4s}
+@keyframes eq{0%,100%{height:5px}50%{height:16px}}
+.mini .txt{flex:1;min-width:0;font-size:13px;line-height:1.3}
+.mini .txt b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini .txt small{color:var(--tx2)}
+.mini button{width:36px;height:36px;border-radius:12px;background:var(--card);font-size:16px;flex:none}
+.card{background:var(--card);border-radius:var(--r);padding:16px;box-shadow:var(--shadow);margin-bottom:14px;border:1px solid var(--line)}
+.card.glow{background:linear-gradient(135deg,#2c3a72,#1d2747 60%);border-color:#3c4a85}
+[data-theme=light] .card.glow{background:linear-gradient(135deg,#e6f2ec,#fff 65%);border-color:#cfe3d9}
+.muted{color:var(--tx2)}.small{font-size:13px}.tiny{font-size:11.5px;color:var(--tx3)}
+.row{display:flex;align-items:center;gap:10px}.between{justify-content:space-between}.wrap{flex-wrap:wrap}
+.sec{margin:22px 0 10px;display:flex;align-items:baseline;justify-content:space-between}
+.sec h3{font-size:16px}.sec a{color:var(--moon);font-size:13px;font-weight:600;text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--moon);color:var(--acc-tx);font-weight:700;border-radius:14px;padding:13px 18px;font-size:15px;text-decoration:none}
+.btn.block{display:flex;width:100%}
+.btn.ghost{background:var(--card2);color:var(--tx);border:1px solid var(--line)}
+.btn.rose{background:var(--rose);color:#fff}
+.btn.sm{padding:8px 12px;font-size:13px;border-radius:11px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none;margin:0 -16px;padding-left:16px;padding-right:16px}
+.chips::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;padding:8px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--tx2)}
+.chip.on{background:var(--moon);color:var(--acc-tx);border-color:var(--moon)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qa{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:6px;min-height:96px}
+.qa .e{font-size:26px}.qa b{font-size:14px;line-height:1.25}.qa small{color:var(--tx3);font-size:11.5px;line-height:1.3}
+.item{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;margin-bottom:10px;width:100%;text-align:left;text-decoration:none;color:inherit}
+.item .ic{width:50px;height:50px;border-radius:14px;background:var(--card2);display:grid;place-items:center;font-size:24px;flex:none}
+.item .bd{flex:1;min-width:0}.item .bd b{display:block;font-size:14.5px;line-height:1.3}.item .bd small{color:var(--tx2);font-size:12px}
+.item .go{color:var(--tx3);font-size:18px}
+.item.playing{border-color:var(--moon);box-shadow:0 0 0 1px var(--moon) inset}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.3px;padding:3px 8px;border-radius:999px;background:var(--card2);color:var(--tx2);margin-right:4px}
+.tag.y{background:#ffd36b26;color:var(--moon)}.tag.m{background:#7fe0c326;color:var(--mint)}.tag.r{background:#ff8fab26;color:var(--rose)}
+.fav{font-size:20px;width:40px;height:40px;border-radius:12px;background:var(--card2);display:grid;place-items:center}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{position:relative;padding:10px 0 10px 40px;border-bottom:1px dashed var(--line)}
+.steps li:last-child{border:0}
+.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;border-radius:50%;background:var(--card2);color:var(--moon);font-weight:700;font-size:13px;display:grid;place-items:center}
+ul.bul{padding-left:20px;margin:6px 0}ul.bul li{margin:5px 0}
+.warn{background:#ff8fab1a;border:1px solid #ff8fab55;border-radius:14px;padding:12px 14px;font-size:13px;color:var(--tx)}
+.note{background:#ffd36b14;border:1px solid #ffd36b44;border-radius:14px;padding:12px 14px;font-size:13px}
+.hero-ill{background:radial-gradient(circle at 50% 40%,#2e3d77,#1a2344 70%);border-radius:var(--r);display:flex;justify-content:center;padding:10px;margin-bottom:14px}
+[data-theme=light] .hero-ill{background:radial-gradient(circle at 50% 40%,#fff6e6,#f3ebdf 70%)}
+.hero-ill svg{width:180px;height:270px}
+/* progresso do ritual */
+.ring{width:64px;height:64px;flex:none}
+.prog{height:8px;background:var(--card2);border-radius:99px;overflow:hidden}.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--moon),var(--moon2));border-radius:99px;transition:width .4s}
+.check{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line);width:100%;text-align:left}
+.check:last-child{border:0}
+.check .bx{width:26px;height:26px;border-radius:8px;border:2px solid var(--line);display:grid;place-items:center;flex:none;font-size:14px;color:#fff;margin-top:1px}
+.check.ok .bx{background:var(--mint);border-color:var(--mint)}
+.check.ok b{text-decoration:line-through;opacity:.6}
+.check .e{font-size:20px}
+/* tabela */
+table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td{padding:9px 4px;border-bottom:1px dashed var(--line);vertical-align:top}table.t td:first-child{color:var(--moon);font-weight:700;width:64px;white-space:nowrap}
+.kv{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:12px 0}
+.kv div{background:var(--card2);border-radius:12px;padding:10px;text-align:center}.kv b{display:block;font-size:13px;line-height:1.25}.kv small{font-size:10.5px;color:var(--tx3)}
+/* player */
+.player{position:fixed;inset:0;z-index:60;background:radial-gradient(circle at 50% 30%,#24306a,#0b1022 75%);color:#eef1fb;display:flex;flex-direction:column;align-items:center;padding:calc(12px + env(safe-area-inset-top)) 16px calc(16px + env(safe-area-inset-bottom));overflow-y:auto}
+.player .ptop{width:100%;max-width:520px;display:flex;align-items:center;gap:10px}
+.player .ptop .iconbtn{background:#ffffff14}
+.player .pname{flex:1;text-align:center;font-size:13px;color:#a9b3d6}
+.player .pbar{display:flex;gap:4px;width:100%;max-width:520px;margin:10px 0 4px}
+.player .pbar i{flex:1;height:4px;border-radius:4px;background:#ffffff22;overflow:hidden}.player .pbar i b{display:block;height:100%;width:0;background:var(--moon)}
+.player .ill{position:relative;margin:4px 0}
+.player .ill svg{width:min(56vw,230px);height:auto;max-height:42vh}
+.player .stitle{font-size:20px;font-weight:700;text-align:center;margin:6px 0 2px}
+.player .rep{font-size:12px;color:var(--moon);font-weight:700;text-align:center;letter-spacing:.3px}
+.player .sdesc{max-width:440px;text-align:center;color:#d5dbf2;font-size:15px;margin:8px 0 10px;min-height:66px}
+.player .ctr{display:flex;align-items:center;gap:22px;margin:6px 0}
+.player .ctr button{width:54px;height:54px;border-radius:50%;background:#ffffff14;font-size:20px;display:grid;place-items:center}
+.player .ctr .pp{width:76px;height:76px;background:var(--moon);color:#1f2b4d;font-size:28px;position:relative}
+.player .ctr .pp svg{position:absolute;inset:-6px;width:88px;height:88px;transform:rotate(-90deg)}
+.player .time{font-variant-numeric:tabular-nums;color:#a9b3d6;font-size:13px;margin-top:4px}
+.player .opts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;justify-content:center}
+.player .opts button{padding:8px 12px;border-radius:999px;background:#ffffff12;font-size:12.5px;font-weight:600;color:#cfd6f0}
+.player .opts button.on{background:#ffd36b2a;color:var(--moon)}
+.done{text-align:center;padding:30px 10px}
+.done .big{font-size:64px}
+/* ilustração */
+.baby .body{fill:var(--skin)}.baby .shade{fill:var(--skin2)}.baby .limb{stroke:var(--skin);stroke-linecap:round;fill:none}
+.baby .face{stroke:#8a5a44;stroke-width:2;fill:none;stroke-linecap:round}
+.baby .zone{fill:#ffd36b;opacity:.0}
+.baby .zone.on{animation:zone 2.2s ease-in-out infinite}
+.baby .zl.on{animation:zonel 2.2s ease-in-out infinite}
+@keyframes zone{0%,100%{opacity:.25}50%{opacity:.55}}
+@keyframes zonel{0%,100%{stroke-opacity:.3}50%{stroke-opacity:.65}}
+.baby .path{fill:none;stroke:#ffffff;stroke-opacity:.55;stroke-width:1.6;stroke-dasharray:4 4}
+.baby .hand{fill:#ff8fab;stroke:#fff;stroke-width:2}
+.baby .holdhand{fill:#ff8fab;opacity:.85;animation:hold 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes hold{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+/* diário */
+.bigbtns{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bigbtn{border-radius:18px;padding:18px 12px;text-align:center;font-weight:700;background:var(--card);border:1px solid var(--line)}
+.bigbtn .e{font-size:32px;display:block}
+.running{background:linear-gradient(135deg,#3a2f74,#1d2747);border:1px solid #5a4ea8;border-radius:18px;padding:18px;text-align:center}
+[data-theme=light] .running{background:linear-gradient(135deg,#efe9ff,#fff);border-color:#d6ccff}
+.running .clock{font-size:40px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:1px}
+.entry{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line)}
+.entry:last-child{border:0}
+.entry .e{font-size:22px}.entry .bd{flex:1}.entry .bd b{display:block;font-size:14px}.entry .del{color:var(--tx3);font-size:18px;padding:6px}
+.chart svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--tx2);margin-top:6px}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+/* sons */
+.vol{display:flex;align-items:center;gap:10px;margin:8px 0}.vol span{width:96px;white-space:nowrap;flex:none;font-size:12.5px;color:var(--tx2)}
+input[type=range]{-webkit-appearance:none;appearance:none;background:transparent;border:0;padding:0;height:28px}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:var(--card2)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--moon);margin-top:-8px;border:3px solid var(--bg)}
+input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:var(--card2)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--moon);border:3px solid var(--bg)}
+.seg{display:flex;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px;margin-bottom:14px}
+.seg button{flex:1;padding:9px;border-radius:10px;font-weight:600;font-size:14px;color:var(--tx2)}
+.seg button.on{background:var(--moon);color:var(--acc-tx)}
+/* luz noturna */
+.nightlight{position:fixed;inset:0;z-index:80;background:#000;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#7a5a30}
+.nightlight .glow{width:80vmin;height:80vmin;border-radius:50%;background:radial-gradient(circle,#ff9a3c 0%,#ff7a1a55 35%,transparent 70%);animation:breathe 8s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(.92)}50%{transform:scale(1.04)}}
+.nightlight .ctl{position:absolute;bottom:calc(24px + env(safe-area-inset-bottom));left:16px;right:16px;max-width:420px;margin:auto;text-align:center;font-size:12px}
+.nightlight input[type=range]::-webkit-slider-runnable-track{background:#3a2a18}
+.nightlight input[type=range]::-webkit-slider-thumb{background:#c47a2c;border-color:#000}
+/* onboarding */
+.onb{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:30px 4px}
+.onb .moonbig{width:110px;height:110px;border-radius:50%;margin:0 auto 18px;background:radial-gradient(circle at 35% 35%,#fff1c2,var(--moon) 45%,var(--moon2));box-shadow:0 0 60px #ffd36b66}
+.onb h1{text-align:center;font-size:26px}
+.onb p.lead{text-align:center;color:var(--tx2);margin:8px 0 22px}
+label.f{display:block;font-size:13px;font-weight:600;color:var(--tx2);margin:14px 0 6px}
+.toast{position:fixed;left:50%;bottom:calc(140px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);background:var(--tx);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13.5px;font-weight:600;opacity:0;transition:.3s;z-index:90;pointer-events:none;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.fade{animation:fade .25s ease}@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.switch{width:50px;height:30px;border-radius:99px;background:var(--card2);border:1px solid var(--line);position:relative;flex:none;transition:.2s}
+.switch:after{content:'';position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:var(--tx3);transition:.2s}
+.switch.on{background:var(--mint)}.switch.on:after{left:23px;background:#fff}
+.setrow{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px dashed var(--line)}.setrow:last-child{border:0}.setrow .bd{flex:1}.setrow .bd b{display:block;font-size:14.5px}.setrow .bd small{color:var(--tx3);font-size:12px}
+.footer-note{font-size:11.5px;color:var(--tx3);text-align:center;margin:24px 8px 0;line-height:1.5}
+
+/* álbum */
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fcard{position:relative;display:block;border-radius:16px;overflow:hidden;aspect-ratio:1;background:var(--card2);text-decoration:none;color:#fff}
+.fcard img{width:100%;height:100%;object-fit:cover;display:block}
+.fcard .flab{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;background:linear-gradient(transparent,#000b)}
+.fcard .flab b{display:block;font-size:14px;line-height:1.2}.fcard .flab small{font-size:10.5px;opacity:.85}
+.fmarco{position:absolute;top:8px;left:8px;right:8px;font-size:10px;font-weight:700;background:#ffd36be6;color:#1f2b4d;border-radius:99px;padding:3px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:fit-content;max-width:calc(100% - 16px)}
+.fprev{position:relative;border-radius:var(--r);overflow:hidden;margin:8px 0 14px;background:var(--card2)}
+.fprev img{width:100%;max-height:62vh;object-fit:contain;display:block}
+.fbadge{position:absolute;right:10px;bottom:10px;background:#ffd36b;color:#1f2b4d;font-weight:700;font-size:13px;border-radius:99px;padding:5px 12px}
+.fbadge.l{right:auto;left:10px;background:#fff;color:#1f2b4d}
+.fstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.fstrip a{position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;display:block}
+.fstrip img{width:100%;height:100%;object-fit:cover}
+.fstrip span{position:absolute;left:0;right:0;bottom:0;font-size:10px;font-weight:700;color:#fff;text-align:center;padding:10px 2px 3px;background:linear-gradient(transparent,#000a)}
+.cmp{position:relative;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;background:#000;touch-action:none;user-select:none;margin:8px 0 4px}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cmp .cA{position:absolute;inset:0}
+.cline{position:absolute;top:0;bottom:0;width:3px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.cline span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#fff;color:#1f2b4d;display:grid;place-items:center;font-weight:700;box-shadow:0 2px 10px #0006}
+.evoStage{position:relative;width:min(88vw,420px);aspect-ratio:3/4;border-radius:22px;overflow:hidden;margin:14px 0 6px;background:#000;box-shadow:0 10px 40px #0008}
+.evoStage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 1s ease,transform 2.4s ease}
+.evoStage img.on{opacity:1;transform:scale(1)}
+
+/* tema claro Chef Nanna: ajustes finos */
+[data-theme=light] .tag.y{background:#e8590c17;color:#e8590c}
+[data-theme=light] .tag.m{background:#2b6a5817;color:#2b6a58}
+[data-theme=light] .note{background:#e8590c0d;border-color:#e8590c40}
+[data-theme=light] nav.tabs{background:#fff}
+[data-theme=light] .onb .moonbig{background:radial-gradient(circle at 35% 35%,#fff1c2,#ffd36b 45%,#ffb84d)}
+[data-theme=light] .item.playing{border-color:#2b6a58;box-shadow:0 0 0 1px #2b6a58 inset}
+[data-theme=light] input[type=range]::-webkit-slider-thumb{border-color:#fff}
+/* player, filminho e luz são sempre escuros */
+.player{--moon:#ffd36b;--acc-tx:#1f2b4d;--tx:#eef1fb;--tx2:#a9b3d6;--tx3:#7c87b0;--card:#1d2747;--card2:#26325a;--line:#2f3c68}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<div id="app">
+  <header class="top"><div class="brand"><div class="moonlogo">🌙</div><div><b>Noite Tranquila</b><small>por Chef Nanna</small></div></div>
+  <a class="iconbtn" href="#mais" aria-label="Mais opções" style="text-decoration:none">☰</a></header>
+  <main id="view"></main>
+</div>
+<div class="mini" id="mini"><div class="in"><div class="eq"><i></i><i></i><i></i></div><div class="txt" id="minitxt"></div>
+<button onclick="go('ninar')" aria-label="Abrir sons">⏱</button><button onclick="Audio2.stopAll()" aria-label="Parar">■</button></div></div>
+<nav class="tabs"><div class="in">
+<a href="#inicio" data-t="inicio"><span>🏠</span>Início</a>
+<a href="#massagens" data-t="massagens"><span>👐</span>Massagens</a>
+<a href="#ninar" data-t="ninar"><span>🎶</span>Ninar</a>
+<a href="#rotina" data-t="rotina"><span>🕰️</span>Rotina</a>
+<a href="#diario" data-t="diario"><span>📔</span>Diário</a>
+<a href="#album" data-t="album"><span>📸</span>Álbum</a>
+</div></nav>
+<div class="toast" id="toast"></div>
+<script>/* ================= CONTEÚDO DO APP NOITE TRANQUILA ================= */
+/* Zonas do corpo (para destacar na ilustração): rosto,testa,cabeca,peito,barriga,bracoE,bracoD,maoE,maoD,pernaE,pernaD,peE,peD,costas
+   Caminhos (path) em coordenadas do desenho 200x300. hold:true = mãos paradas (sem movimento). back:true = bebê de bruços (vista das costas). */
+
+const P = {
+  livro:  ['M100,100 Q86,96 72,108','M100,100 Q114,96 128,108'],
+  cruzado:['M76,168 L124,102','M124,168 L76,102'],
+  bracoD: ['M134,98 L164,168'], bracoE:['M66,98 L36,168'],
+  bracoDsue:['M164,168 L134,98'], bracoEsue:['M36,168 L66,98'],
+  maoD:   ['M167,176 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0'], maoE:['M33,176 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0'],
+  barrigaPas:['M80,118 L80,160','M100,118 L100,162','M120,118 L120,160'],
+  pernaD: ['M117,182 L125,262'], pernaE:['M83,182 L75,262'],
+  pernaDsue:['M125,262 L117,182'], pernaEsue:['M75,262 L83,182'],
+  peD:    ['M127,278 L127,266'], peE:['M73,278 L73,266'],
+  costasVai:['M74,104 L126,104 L74,118 L126,118 L74,132 L126,132 L74,146 L126,146 L74,160 L126,160'],
+  costasLonga:['M100,90 L100,178 L80,262','M100,90 L100,178 L120,262'],
+  coluna: ['M100,176 L100,94'],
+  costasDesce:['M100,94 L100,176'],
+  rosto:  ['M96,64 Q86,68 76,62','M104,64 Q114,68 124,62'],
+  testaCentro:['M100,46 Q88,40 76,46','M100,46 Q112,40 124,46'],
+  portao: ['M97,50 L97,30','M103,50 L103,30'],
+  sobrancelha:['M100,49 Q90,45 82,49','M100,49 Q110,45 118,49'],
+  temporas:['M76,52 m-4,0 a4,4 0 1,1 8,0 a4,4 0 1,1 -8,0','M124,52 m-4,0 a4,4 0 1,1 8,0 a4,4 0 1,1 -8,0'],
+  circHor:['M100,122 A18,18 0 1,1 99.9,122'],
+  I:      ['M120,120 L120,160'],
+  L:      ['M80,122 L120,122 L120,160'],
+  U:      ['M80,160 L80,122 L120,122 L120,160'],
+  lua:    ['M82,150 A18,18 0 0,1 118,150'],
+  sol:    ['M100,122 A18,18 0 1,1 99.9,122'],
+  desceUmbigo:['M100,140 L100,166'],
+  joelhos:['M100,150 L100,124'],
+  cafune: ['M100,28 m-8,0 a8,8 0 1,1 16,0 a8,8 0 1,1 -16,0','M86,40 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0','M114,40 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0'],
+  nuca:   ['M88,78 Q100,84 112,78'],
+  pincelBraco:['M134,98 L164,168','M66,98 L36,168'],
+  pincelPerna:['M117,182 L125,262','M83,182 L75,262'],
+  abraco: ['M70,110 Q100,130 130,110','M130,110 Q100,130 70,110'],
+  corpoTodo:['M100,90 L100,178','M134,98 L164,168','M66,98 L36,168','M117,182 L125,262','M83,182 L75,262']
+};
+
+const MASSAGENS = [
+ {id:'shantala',nome:'Shantala',pais:'Índia',flag:'🇮🇳',idade:'A partir de 1 mês',min:12,tag:'Clássica',
+  intro:'Massagem tradicional de Kerala, no sul da Índia, levada ao Ocidente pelo médico francês Frédérick Leboyer nos anos 70. Movimentos longos, lentos e sempre na mesma ordem: o bebê aprende que é hora de relaxar.',
+  passos:[
+   {t:'Peito: livro aberto',d:'Mãos com óleo no centro do peito. Deslize as duas ao mesmo tempo para os lados, como quem abre as páginas de um livro.',s:60,z:['peito'],p:P.livro,rep:'6 vezes'},
+   {t:'Peito: cruzado',d:'Uma mão sai do lado do quadril e sobe em diagonal até o ombro oposto. Depois a outra mão faz o mesmo, alternando, num X suave.',s:60,z:['peito','barriga'],p:P.cruzado,rep:'6 vezes'},
+   {t:'Braços: anel',d:'Segure o bracinho com as mãos em forma de anel. Deslize do ombro até o punho, uma mão atrás da outra, como se ordenhasse devagar.',s:80,z:['bracoD','bracoE'],p:P.bracoD.concat(P.bracoE),rep:'6 vezes cada braço'},
+   {t:'Mãozinhas',d:'Com os polegares, abra a palma do centro para fora. Depois role cada dedinho entre seu polegar e indicador.',s:50,z:['maoD','maoE'],p:P.maoD.concat(P.maoE),rep:'30 segundos cada mão'},
+   {t:'Barriga: pás',d:'Mãos alternadas deslizam da base das costelas até o pé da barriga, como pás que empurram água. Sempre de cima para baixo.',s:60,z:['barriga'],p:P.barrigaPas,rep:'6 vezes'},
+   {t:'Pernas: anel',d:'Mesmo movimento dos braços: mãos em anel do quadril até o tornozelo, alternadas, sem apertar.',s:80,z:['pernaD','pernaE'],p:P.pernaD.concat(P.pernaE),rep:'6 vezes cada perna'},
+   {t:'Pezinhos',d:'Polegares deslizam na sola, do calcanhar até os dedinhos. Termine com uma leve pressão no centro do pé.',s:50,z:['peD','peE'],p:P.peD.concat(P.peE),rep:'30 segundos cada pé'},
+   {t:'Costas: vai e vem',d:'Bebê de bruços no seu colo, acordado e com você atenta. Mãos em vai e vem atravessando as costas, descendo do pescoço até o bumbum.',s:80,z:['costas'],p:P.costasVai,back:true,rep:'6 vezes'},
+   {t:'Rostinho',d:'Polegares na testa, do centro para fora. Depois ao lado do nariz até as bochechas, bem de leve.',s:45,z:['rosto','testa'],p:P.testaCentro.concat(P.rosto),rep:'5 vezes'},
+   {t:'Abraço final',d:'Cruze os bracinhos sobre o peito e abra de novo, devagar. Termine com as mãos paradas no peito dele por alguns segundos.',s:40,z:['peito','bracoD','bracoE'],p:P.abraco,rep:'3 vezes'}
+  ]},
+ {id:'maalish',nome:'Maalish (óleo antes do banho)',pais:'Índia',flag:'🇮🇳',idade:'A partir de 1 mês',min:8,tag:'Tradição',
+  intro:'Na Índia, as avós fazem uma massagem diária com óleo morno antes do banho. Massagem + banho morno é uma das combinações mais relaxantes para o fim do dia.',
+  passos:[
+   {t:'Aqueça o óleo nas mãos',d:'Esfregue as mãos com um pouco de óleo vegetal neutro até ficarem mornas. Nunca aqueça o óleo no fogo ou micro-ondas.',s:20,z:[],p:[],hold:true},
+   {t:'Pernas',d:'Deslizes longos do quadril até os pés, com a mão inteira. Depois pequenos círculos nas coxas.',s:90,z:['pernaD','pernaE'],p:P.pernaD.concat(P.pernaE),rep:'8 vezes cada'},
+   {t:'Braços',d:'Deslizes do ombro até as mãos. Abra as palminhas com os polegares.',s:80,z:['bracoD','bracoE'],p:P.bracoD.concat(P.bracoE),rep:'8 vezes cada'},
+   {t:'Barriga',d:'Círculos lentos no sentido horário ao redor do umbigo, com a palma da mão.',s:60,z:['barriga'],p:P.circHor,rep:'10 círculos'},
+   {t:'Costas',d:'De bruços no seu colo: deslizes do pescoço até o bumbum com as duas mãos.',s:80,z:['costas'],p:P.costasLonga,back:true,rep:'8 vezes'},
+   {t:'Para o banho',d:'Agora o banho morno. Seque sem esfregar, vista o pijama e siga para a mamada com luz baixa.',s:20,z:[],p:[],hold:true}
+  ]},
+ {id:'euteamo',nome:'"Eu te amo" na barriguinha',pais:'EUA',flag:'🇺🇸',idade:'A partir de 1 mês',min:3,tag:'Gases e cólica',
+  intro:'Clássica da massagem infantil americana para gases. Você "desenha" as letras I, L e U na barriga, sempre no sentido do intestino, como quem diz "I Love You". Barriga tranquila, noite mais tranquila.',
+  passos:[
+   {t:'Letra I',d:'Do lado esquerdo da barriga DELE (seu lado direito), deslize a mão de cima para baixo, das costelas até o pé da barriga.',s:40,z:['barriga'],p:P.I,rep:'6 vezes'},
+   {t:'Letra L (de lado)',d:'Comece do lado direito dele, atravesse por baixo das costelas e desça pelo lado esquerdo dele.',s:45,z:['barriga'],p:P.L,rep:'6 vezes'},
+   {t:'Letra U (de cabeça para baixo)',d:'Suba pelo lado direito dele, atravesse por cima e desça pelo lado esquerdo. É o caminho do intestino.',s:50,z:['barriga'],p:P.U,rep:'6 vezes'},
+   {t:'Joelhinhos na barriga',d:'Segure as perninhas e leve os joelhos suavemente em direção à barriga. Segure 3 segundos e solte. Depois faça "bicicletinha" bem devagar.',s:45,z:['pernaD','pernaE','barriga'],p:P.joelhos,rep:'6 vezes'}
+  ]},
+ {id:'solelua',nome:'Sol e Lua',pais:'EUA',flag:'🇺🇸',idade:'A partir de 1 mês',min:3,tag:'Gases e cólica',
+  intro:'Faz parte do método de massagem infantil criado pela americana Vimala McClure, inspirado no que ela aprendeu na Índia. Uma mão desenha o sol, a outra a lua: um movimento contínuo que acalma.',
+  passos:[
+   {t:'O sol',d:'A mão direita faz círculos completos e lentos no sentido horário ao redor do umbigo, sem parar.',s:45,z:['barriga'],p:P.sol,rep:'contínuo'},
+   {t:'A lua',d:'Enquanto o sol continua, a mão esquerda desenha uma meia-lua por cima, da direita para a esquerda dele, e sai.',s:60,z:['barriga'],p:P.sol.concat(P.lua),rep:'8 luas'},
+   {t:'Mãos paradas',d:'Termine com as duas mãos mornas paradas sobre a barriga. Respire devagar.',s:30,z:['barriga'],p:[],hold:true}
+  ]},
+ {id:'ordenha',nome:'Ordenha indiana e sueca',pais:'Índia e Suécia',flag:'🇮🇳🇸🇪',idade:'A partir de 1 mês',min:4,tag:'Pernas e braços',
+  intro:'No método de massagem infantil ensinado no mundo todo, existem dois jeitos de "ordenhar" braços e pernas: o indiano (do corpo para as pontas, relaxa) e o sueco (das pontas para o corpo, ativa a circulação). Juntos, deixam o corpinho leve.',
+  passos:[
+   {t:'Perna: ordenha indiana',d:'Mãos em anel, uma atrás da outra, do quadril até o pé.',s:45,z:['pernaD','pernaE'],p:P.pernaD.concat(P.pernaE),rep:'6 vezes cada'},
+   {t:'Perna: ordenha sueca',d:'Agora o caminho inverso: do tornozelo até o quadril, mãos em anel alternadas.',s:45,z:['pernaD','pernaE'],p:P.pernaDsue.concat(P.pernaEsue),rep:'6 vezes cada'},
+   {t:'Rolinho',d:'Coloque a perninha entre as suas palmas e role suavemente, como quem faz um rolinho de massa, do joelho ao tornozelo.',s:30,z:['pernaD','pernaE'],p:P.pernaD.concat(P.pernaE),rep:'4 vezes'},
+   {t:'Braço: indiana e sueca',d:'Repita nos braços: do ombro à mão, depois da mão ao ombro.',s:60,z:['bracoD','bracoE'],p:P.bracoD.concat(P.bracoDsue),rep:'6 vezes cada'}
+  ]},
+ {id:'firme',nome:'Pressão firme e lenta',pais:'EUA',flag:'🇺🇸',idade:'A partir de 1 mês',min:5,tag:'Baseada em pesquisa',
+  intro:'Pesquisas do Touch Research Institute (Universidade de Miami), coordenadas pela psicóloga Tiffany Field, mostraram que o toque com pressão moderada e lenta relaxa mais que o toque muito leve, que pode fazer cócegas.',
+  passos:[
+   {t:'A pressão certa',d:'Use a palma inteira, com a firmeza de um abraço gostoso: sem apertar, mas sem ser só "pluma". Cada deslize leva cerca de 5 a 10 segundos.',s:20,z:[],p:[],hold:true},
+   {t:'Costas',d:'De bruços no colo: palmas descem da nuca até o bumbum, devagar.',s:80,z:['costas'],p:P.costasDesce,back:true,rep:'8 vezes'},
+   {t:'Pernas',d:'Palma inteira do quadril ao pé, devagar, com pressão constante.',s:70,z:['pernaD','pernaE'],p:P.pernaD.concat(P.pernaE),rep:'6 vezes cada'},
+   {t:'Braços',d:'Mesmo movimento do ombro até a mão.',s:60,z:['bracoD','bracoE'],p:P.bracoD.concat(P.bracoE),rep:'6 vezes cada'},
+   {t:'Peito e barriga',d:'Deslizes do peito até a barriga com as duas mãos, lentos.',s:50,z:['peito','barriga'],p:['M100,96 L100,160'],rep:'6 vezes'}
+  ]},
+ {id:'portao',nome:'Abrir o portão do céu',pais:'China',flag:'🇨🇳',idade:'A partir de 3 meses',min:2,tag:'Antes de dormir',
+  intro:'Técnica do Tui Na infantil, a massagem tradicional chinesa para crianças. É feita no rosto, com os polegares, e costuma ser usada para acalmar e preparar para o sono.',
+  passos:[
+   {t:'Abrir o portão',d:'Polegares alternados deslizam do meio das sobrancelhas até a linha do cabelo, bem devagar.',s:50,z:['testa'],p:P.portao,rep:'30 vezes'},
+   {t:'Sobrancelhas',d:'Polegares saem juntos do meio da testa e deslizam por cima das sobrancelhas até as laterais.',s:40,z:['testa'],p:P.sobrancelha,rep:'20 vezes'},
+   {t:'Têmporas',d:'Pequenos círculos bem leves com a ponta dos dedos nas têmporas.',s:30,z:['testa'],p:P.temporas,rep:'20 círculos'}
+  ]},
+ {id:'mofu',nome:'Círculos na barriga (Mo Fu)',pais:'China',flag:'🇨🇳',idade:'A partir de 1 mês',min:3,tag:'Gases e digestão',
+  intro:'"Mo fu" quer dizer "acariciar a barriga" no Tui Na chinês. É usado para a digestão e para relaxar depois do jantar.',
+  passos:[
+   {t:'Palma morna',d:'Esfregue as mãos e apoie a palma parada sobre o umbigo por alguns segundos.',s:20,z:['barriga'],p:[],hold:true},
+   {t:'Círculos lentos',d:'Círculos no sentido horário ao redor do umbigo, com a palma inteira, bem devagar.',s:90,z:['barriga'],p:P.circHor,rep:'30 círculos'},
+   {t:'Deslizar para baixo',d:'Do umbigo até o pé da barriga, com a lateral da mão.',s:30,z:['barriga'],p:P.desceUmbigo,rep:'10 vezes'}
+  ]},
+ {id:'nieji',nome:'Rolinho nas costas (Nie Ji)',pais:'China',flag:'🇨🇳',idade:'A partir de 6 meses',min:2,tag:'Relaxar',
+  intro:'Outra técnica do Tui Na infantil: a pele das costas é "rolada" de leve ao longo da coluna. Deve ser sempre muito suave, nunca beliscar.',
+  passos:[
+   {t:'Aquecer as costas',d:'Bebê de bruços no colo, com você atenta. Deslize as mãos das costas até o bumbum algumas vezes.',s:30,z:['costas'],p:P.costasDesce,back:true,rep:'5 vezes'},
+   {t:'Rolar a pele',d:'Com o polegar e o indicador, pegue levemente a pele ao lado da coluna, perto do bumbum, e vá "rolando" para cima até a nuca. Bem suave.',s:60,z:['costas'],p:P.coluna,back:true,rep:'3 vezes'},
+   {t:'Finalizar',d:'Deslize as palmas de cima para baixo para acalmar a pele.',s:20,z:['costas'],p:P.costasDesce,back:true,rep:'5 vezes'}
+  ]},
+ {id:'teate',nome:'Te-ate (mãos que acolhem)',pais:'Japão',flag:'🇯🇵',idade:'Desde o nascimento',min:2,tag:'No berço',
+  intro:'"Te-ate" quer dizer "colocar as mãos" em japonês. É a ideia de que mãos quentes e paradas acalmam. Perfeita para fazer com o bebê já no berço.',
+  passos:[
+   {t:'Aquecer as mãos',d:'Esfregue as mãos até ficarem mornas. Respire fundo e devagar.',s:15,z:[],p:[],hold:true},
+   {t:'Mãos na barriga',d:'Apoie as duas mãos paradas sobre a barriga dele, sem pressionar. Respire devagar e deixe ele sentir o seu ritmo.',s:60,z:['barriga'],p:[],hold:true},
+   {t:'Mão no peito',d:'Passe uma mão para o peito e mantenha parada. Se quiser, cantarole baixinho.',s:45,z:['peito'],p:[],hold:true}
+  ]},
+ {id:'pincel',nome:'Toque de pincel',pais:'Japão',flag:'🇯🇵',idade:'Desde o nascimento',min:2,tag:'Bem leve',
+  intro:'Inspirado no shonishin, a técnica japonesa infantil feita sem agulhas, com toques rápidos e leves na pele. Em casa, as pontas dos seus dedos viram um pincel macio.',
+  passos:[
+   {t:'Braços',d:'Com as pontas dos dedos, "escove" de leve do ombro até a mão, como um pincel macio.',s:40,z:['bracoD','bracoE'],p:P.pincelBraco,rep:'10 vezes'},
+   {t:'Costas',d:'De bruços no colo: escove de leve da nuca até o bumbum.',s:40,z:['costas'],p:P.costasDesce,back:true,rep:'10 vezes'},
+   {t:'Pernas',d:'Escove do quadril até os pés.',s:40,z:['pernaD','pernaE'],p:P.pincelPerna,rep:'10 vezes'}
+  ]},
+ {id:'yakson',nome:'Yak-son (mão de remédio)',pais:'Coreia do Sul',flag:'🇰🇷',idade:'Desde o nascimento',min:3,tag:'Com cantiga',
+  intro:'Na Coreia, as avós esfregam a barriga das crianças em círculos cantando "a mão da vovó é remédio". Une toque e voz, e é uma lembrança de carinho para a vida toda.',
+  passos:[
+   {t:'Aquecer',d:'Esfregue as mãos até ficarem quentinhas.',s:15,z:[],p:[],hold:true},
+   {t:'Círculos cantados',d:'Faça círculos lentos no sentido horário na barriga enquanto canta baixinho: "A mão da mamãe é remédio, a barriguinha vai sarar, a mão da mamãe é remédio, agora é hora de nanar."',s:120,z:['barriga'],p:P.circHor,rep:'enquanto canta'},
+   {t:'Mão parada',d:'Termine com a mão parada na barriga por alguns segundos.',s:20,z:['barriga'],p:[],hold:true}
+  ]},
+ {id:'tatil',nome:'Massagem tátil',pais:'Suécia',flag:'🇸🇪',idade:'Desde o nascimento',min:5,tag:'Rotina',
+  intro:'A "taktil massage" foi desenvolvida na Suécia nos anos 60, com bebês prematuros. São deslizes lentos com a mão inteira, sempre na mesma ordem e no mesmo ritmo. A previsibilidade é o que acalma.',
+  passos:[
+   {t:'Costas',d:'Mão inteira, deslizes lentos e iguais da nuca até o bumbum. Mantenha sempre o mesmo ritmo.',s:90,z:['costas'],p:P.costasDesce,back:true,rep:'10 vezes'},
+   {t:'Braços',d:'Deslizes lentos do ombro até a mão, no mesmo ritmo.',s:60,z:['bracoD','bracoE'],p:P.bracoD.concat(P.bracoE),rep:'6 vezes cada'},
+   {t:'Pernas',d:'Do quadril até o pé, no mesmo ritmo.',s:60,z:['pernaD','pernaE'],p:P.pernaD.concat(P.pernaE),rep:'6 vezes cada'},
+   {t:'Pés',d:'Envolva o pezinho com a mão inteira e segure por alguns segundos.',s:40,z:['peD','peE'],p:[],hold:true}
+  ]},
+ {id:'karite',nome:'Massagem com karité',pais:'África Ocidental',flag:'🌍',idade:'A partir de 1 mês',min:6,tag:'Pós-banho',
+  intro:'Em Gana e na Nigéria, é tradição massagear o bebê com manteiga de karité depois do banho. Hidrata a pele e faz parte do ritual da noite. Se houver alergia na família, use um óleo neutro.',
+  passos:[
+   {t:'Derreter nas mãos',d:'Pegue um pouquinho de karité puro e esfregue nas mãos até derreter.',s:20,z:[],p:[],hold:true},
+   {t:'Pernas e pés',d:'Deslizes longos do quadril aos pés. Termine envolvendo cada pezinho.',s:80,z:['pernaD','pernaE','peD','peE'],p:P.pernaD.concat(P.pernaE),rep:'6 vezes cada'},
+   {t:'Braços e mãos',d:'Do ombro às mãos. Abra as palminhas com os polegares.',s:70,z:['bracoD','bracoE'],p:P.bracoD.concat(P.bracoE),rep:'6 vezes cada'},
+   {t:'Barriga e peito',d:'Círculos lentos na barriga e deslizes do centro do peito para os lados.',s:60,z:['barriga','peito'],p:P.circHor.concat(P.livro),rep:'6 vezes'},
+   {t:'Costas',d:'De bruços no colo: deslizes longos da nuca às pernas.',s:70,z:['costas'],p:P.costasLonga,back:true,rep:'6 vezes'}
+  ]},
+ {id:'cafune',nome:'Cafuné',pais:'Brasil',flag:'🇧🇷',idade:'Desde o nascimento',min:2,tag:'Para fechar a noite',
+  intro:'Uma palavra que só existe em português: carinho lento no couro cabeludo. É o jeito brasileiro de fechar o ritual e pegar no sono.',
+  passos:[
+   {t:'Cabeça',d:'Com as pontas dos dedos, faça círculos lentos no couro cabeludo. Na moleira, só toque bem leve, sem pressionar.',s:60,z:['cabeca'],p:P.cafune,rep:'devagar'},
+   {t:'Atrás das orelhas e nuca',d:'Pequenos círculos atrás das orelhas e deslizes leves na nuca.',s:40,z:['cabeca'],p:P.nuca,rep:'devagar'},
+   {t:'Mão parada',d:'Deixe a mão parada na cabecinha por alguns segundos. Boa noite.',s:20,z:['cabeca'],p:[],hold:true}
+  ]}
+];
+
+/* Rotinas prontas: cada item = [idMassagem, índiceDoPasso] */
+const ROTINAS = [
+ {id:'noite',nome:'Massagem da noite',emoji:'🌙',min:10,desc:'Sequência completa para depois do banho: rosto, peito, barriga, braços, pernas e cafuné.',som:'brahms',
+  itens:[['portao',0],['portao',1],['shantala',0],['shantala',1],['euteamo',2],['ordenha',0],['shantala',2],['shantala',6],['tatil',0],['cafune',0]]},
+ {id:'barriguinha',nome:'Barriguinha com gases',emoji:'🫧',min:5,desc:'Para quando a barriga está estufada ou ele se contorce depois de mamar.',som:'brilha',
+  itens:[['teate',1],['mofu',1],['euteamo',0],['euteamo',1],['euteamo',2],['solelua',1],['euteamo',3]]},
+ {id:'berco',nome:'Acalmar no berço',emoji:'🛏️',min:2,desc:'Já está no berço e quase dormindo: mãos paradas, cafuné e som de "shhh".',som:'shhh',
+  itens:[['teate',0],['teate',1],['teate',2],['cafune',0]]}
+];
+
+const RITUAL = [
+ {t:'Jantarzinho',d:'Jante sempre no mesmo horário, 1h a 1h30 antes de dormir. Comida leve (veja os Jantarzinhos que acalmam).',e:'🥣',min:20},
+ {t:'Brincadeira calma',d:'Nada de telas nem brincadeiras agitadas. Livros, música baixa, colo.',e:'🧸',min:10},
+ {t:'Banho morno',d:'Água morna (36 a 37 °C), luz mais baixa no banheiro, voz calma.',e:'🛁',min:10},
+ {t:'Massagem da noite',d:'10 minutos de massagem guiada.',e:'👐',min:10,rotina:'noite'},
+ {t:'Pijama e luz baixa',d:'Quarto escuro ou com luz bem fraca e quente. Temperatura agradável.',e:'🌙',min:5},
+ {t:'Mamada ou leitinho',d:'Mamada tranquila, com pouca conversa e pouca luz.',e:'🍼',min:15},
+ {t:'Cantiga de ninar',d:'Sempre a mesma cantiga: ela vira o sinal de "hora de dormir".',e:'🎶',min:5,som:'brahms'},
+ {t:'Berço: sonolento, mas acordado',d:'Coloque no berço de barriga para cima quando estiver quase dormindo. Mão parada no peito se precisar.',e:'🛏️',min:5}
+];
+
+const TECNICAS = [
+ {id:'ritual',nome:'Ritual da noite',pais:'EUA',flag:'🇺🇸',idade:'Todas as idades',cat:'Rotina e ritmo',
+  oque:'Uma sequência curta e sempre igual antes de dormir. Em estudos com mães e bebês, rotinas fixas à noite melhoraram o sono em poucas semanas.',
+  passos:['Escolha 4 a 6 passos (ex.: banho, massagem, pijama, mamada, cantiga, berço).','Faça todos os dias na mesma ordem e mais ou menos no mesmo horário.','Mantenha a luz baixa e a voz calma do começo ao fim.','Dê de 2 a 3 semanas para o bebê "aprender" o ritual.'],
+  cuidado:'Ritual curto funciona melhor que ritual longo: 20 a 40 minutos no total.'},
+ {id:'3r',nome:'Os 3 R holandeses',pais:'Holanda',flag:'🇳🇱',idade:'Todas as idades',cat:'Rotina e ritmo',
+  oque:'Na Holanda, as famílias seguem os "3 R": rust (calma), reinheid (ordem e limpeza) e regelmaat (regularidade). É uma das explicações para os bebês holandeses dormirem bem.',
+  passos:['Calma: menos estímulos no fim do dia, casa tranquila.','Ordem: quarto arrumado, roupa confortável, ambiente previsível.','Regularidade: acordar, comer e dormir em horários parecidos todos os dias.'],
+  cuidado:'Regularidade não é rigidez: variações de 30 minutos são normais.'},
+ {id:'luz',nome:'Luz de dia, escuro de noite',pais:'Países nórdicos',flag:'🇩🇰',idade:'Todas as idades',cat:'Rotina e ritmo',
+  oque:'Inspirada nos países nórdicos, onde bebês tiram cochilos ao ar livre. Luz natural de dia e escuro à noite ajudam o relógio biológico do bebê a separar dia e noite.',
+  passos:['De manhã, abra as cortinas e, se der, faça um passeio ao ar livre.','Durante o dia, cochilos podem ter um pouco de luz e barulho normal da casa.','À noite, luz baixa e quente a partir do jantar.','Nas mamadas da madrugada, use só uma luz bem fraca.'],
+  cuidado:'Aqui não fazemos cochilo no frio: a ideia é só aproveitar a luz do dia.'},
+ {id:'easy',nome:'Comer, brincar, dormir',pais:'Reino Unido',flag:'🇬🇧',idade:'A partir de 4 a 6 meses',cat:'Rotina e ritmo',
+  oque:'Rotina popularizada no Reino Unido: o bebê acorda, come, brinca e só depois dorme. Assim ele não depende de mamar para pegar no sono.',
+  passos:['Ao acordar, ofereça a mamada ou refeição.','Depois, tempo de brincar e interagir.','Quando aparecerem sinais de sono (bocejo, coçar os olhos), comece a preparar para dormir.','Repita o ciclo ao longo do dia.'],
+  cuidado:'À noite, a última mamada pode continuar perto da hora de dormir: tudo bem.'},
+ {id:'fading',nome:'Ajuste do horário de dormir',pais:'Austrália e EUA',flag:'🇦🇺',idade:'A partir de 6 meses',cat:'Rotina e ritmo',
+  oque:'Em vez de forçar o sono, você coloca o bebê no berço no horário em que ele REALMENTE dorme, e vai antecipando aos poucos. Em um estudo publicado na revista Pediatrics, funcionou bem e sem choro.',
+  passos:['Anote por 3 dias a hora em que ele de fato pega no sono.','Comece o ritual para que ele chegue ao berço nesse horário.','Quando estiver dormindo rápido, antecipe 15 minutos.','A cada 2 ou 3 noites, antecipe mais 15 minutos até chegar no horário que você quer.'],
+  cuidado:'Mantenha o horário de acordar fixo de manhã: ele é a âncora do dia.'},
+ {id:'sonolento',nome:'Sonolento, mas acordado',pais:'EUA',flag:'🇺🇸',idade:'A partir de 4 a 6 meses',cat:'Rotina e ritmo',
+  oque:'Recomendação da Academia Americana de Pediatria: colocar o bebê no berço quando está quase dormindo, para ele aprender a pegar no sono no próprio berço.',
+  passos:['Observe os sinais: olhar parado, piscadas lentas, corpo mole.','Coloque no berço de barriga para cima nesse momento.','Fique por perto, com a mão no peito dele se precisar.','Se chorar, acalme e tente de novo.'],
+  cuidado:'Nas primeiras noites pode levar mais tempo. Persistência e paciência.'},
+ {id:'pause',nome:'Le pause',pais:'França',flag:'🇫🇷',idade:'Todas as idades',cat:'Acalmar sem deixar chorar',
+  oque:'As mães francesas esperam alguns minutos antes de pegar o bebê quando ele resmunga à noite. Muitas vezes é só o sono agitado entre um ciclo e outro, e ele volta a dormir sozinho.',
+  passos:['Ao ouvir um resmungo, espere de 1 a 3 minutos e observe.','Se ele se acalmar, deixe dormir.','Se o choro aumentar, vá até ele com calma.','Atenda sempre na hora se o choro for forte, de dor ou fome.'],
+  cuidado:'Não é deixar chorar: é dar uma chance para ele se reorganizar.'},
+ {id:'shushpat',nome:'Shhh e tapinhas',pais:'Reino Unido',flag:'🇬🇧',idade:'0 a 12 meses',cat:'Acalmar sem deixar chorar',
+  oque:'Técnica popularizada pela enfermeira inglesa Tracy Hogg: um "shhh" contínuo junto do ouvido com tapinhas ritmados, como um coração.',
+  passos:['Com o bebê no berço (ou no colo), faça um "shhh" longo e suave.','Ao mesmo tempo, dê tapinhas leves e ritmados no colchão ao lado dele ou no peito.','Quando ele acalmar, diminua o shhh e os tapinhas aos poucos.','Pare quando ele estiver respirando devagar.'],
+  cuidado:'Use o som "Shhh" do app se cansar a voz.',som:'shhh'},
+ {id:'pupd',nome:'Pegar e colocar de volta',pais:'Reino Unido',flag:'🇬🇧',idade:'6 a 12 meses',cat:'Acalmar sem deixar chorar',
+  oque:'Se o bebê chora no berço, você pega no colo até ele acalmar e coloca de volta ainda acordado. Repete com paciência. Ele aprende a dormir no berço sem ficar sozinho chorando.',
+  passos:['Chorou no berço: pegue no colo e acalme.','Assim que acalmar (antes de dormir no colo), coloque de volta.','Se chorar de novo, repita.','Nas primeiras noites pode repetir muitas vezes; vai diminuindo.'],
+  cuidado:'Exige paciência: escolha uma semana mais tranquila para começar.'},
+ {id:'handson',nome:'Acalmar com a mão no berço',pais:'Austrália',flag:'🇦🇺',idade:'0 a 12 meses',cat:'Acalmar sem deixar chorar',
+  oque:'Usada pelos serviços públicos de saúde australianos (como a Tresillian): você acalma sem tirar do berço, com a mão no peito, balanço suave e tapinhas.',
+  passos:['Bebê no berço de barriga para cima.','Mão firme e parada no peito, ou tapinhas ritmados.','Fale baixo ou faça "shhh".','Quando ele acalmar, vá tirando a mão devagar.'],
+  cuidado:'Se o choro aumentar muito, pegue no colo e tente de novo depois.'},
+ {id:'cadeira',nome:'Método da cadeira',pais:'Austrália',flag:'🇦🇺',idade:'A partir de 6 meses',cat:'Acalmar sem deixar chorar',
+  oque:'Conhecido como "camping out": você fica sentada ao lado do berço até ele dormir e, a cada poucas noites, afasta a cadeira um pouco, até sair do quarto.',
+  passos:['Noites 1 a 3: cadeira colada no berço, você pode tocar nele.','Noites 4 a 6: cadeira no meio do quarto, só voz.','Noites 7 a 9: cadeira perto da porta.','Depois: você fora do quarto, com a porta encostada.'],
+  cuidado:'Se ele ficar doente no meio, pause e retome depois.'},
+ {id:'5s',nome:'Os 5 S',pais:'EUA',flag:'🇺🇸',idade:'0 a 4 meses',cat:'Acalmar sem deixar chorar',
+  oque:'Método do pediatra americano Harvey Karp para acalmar bebês pequenos: enrolar, segurar de lado no colo, "shhh", balançar e sugar. Depois, sempre deitar de barriga para cima.',
+  passos:['Enrolar: manta firme no tronco, quadril e pernas livres.','Lado: segure de lado ou de bruços NO SEU COLO só para acalmar.','Shhh: som forte e contínuo perto do ouvido.','Balançar: movimentos pequenos e rápidos, apoiando a cabeça.','Sugar: peito, mamadeira ou chupeta.','Quando dormir: berço, sempre de barriga para cima.'],
+  cuidado:'Pare de enrolar assim que o bebê mostrar sinais de tentar rolar. Nunca deixe dormir de lado ou de bruços.'},
+ {id:'canguru',nome:'Pele a pele (Método Canguru)',pais:'Colômbia',flag:'🇨🇴',idade:'Recém-nascidos e crises de choro',cat:'Acalmar sem deixar chorar',
+  oque:'Criado em Bogotá, na Colômbia, em 1978. O contato pele a pele com a mãe ou o pai regula a respiração e o batimento do bebê e acalma.',
+  passos:['Bebê só de fralda no seu peito nu, de bruços e com a cabeça de lado.','Cubra os dois com uma manta.','Respire devagar e fique assim de 20 a 60 minutos.'],
+  cuidado:'Só com o adulto ACORDADO. Se sentir sono, coloque o bebê no berço.'},
+ {id:'sling',nome:'Colo e sling durante o dia',pais:'África e Ásia',flag:'🌏',idade:'0 a 12 meses',cat:'Acalmar sem deixar chorar',
+  oque:'Em muitas culturas da África e da Ásia, os bebês passam o dia no colo ou amarrados ao corpo da mãe. Um estudo mostrou que carregar mais durante o dia reduziu o choro do fim da tarde.',
+  passos:['Durante o dia, ofereça mais colo e, se tiver, use um sling ou carregador.','Mantenha o rosto do bebê visível e o queixo longe do peito.','À noite, o sono continua no berço.'],
+  cuidado:'Sling só com você acordada e atenta à respiração do bebê.'},
+ {id:'shantala2',nome:'Shantala',pais:'Índia',flag:'🇮🇳',idade:'Todas as idades',cat:'Toque, som e ambiente',
+  oque:'A massagem tradicional indiana como parte fixa do ritual. Estudos brasileiros relatam melhora do sono e do relaxamento.',
+  passos:['Faça depois do banho, no mesmo horário.','Use a massagem guiada do app (aba Massagens).'],
+  cuidado:'Veja as regras de segurança antes de começar.',massagem:'shantala'},
+ {id:'arrullo',nome:'Cantiga de ninar (arrullo)',pais:'América Latina',flag:'🇲🇽',idade:'Todas as idades',cat:'Toque, som e ambiente',
+  oque:'Em toda a América Latina, o "arrullo" (ninar cantando) é tradição. A mesma cantiga lenta, todas as noites, vira um sinal de que é hora de dormir.',
+  passos:['Escolha UMA cantiga para ser "a da hora de dormir".','Cante ou toque sempre no mesmo momento do ritual.','Diminua o volume e o ritmo aos poucos.'],
+  cuidado:'Volume baixo: a voz da mãe é o melhor som.',som:'brahms'},
+ {id:'ruido',nome:'Ruído branco',pais:'EUA',flag:'🇺🇸',idade:'Todas as idades',cat:'Toque, som e ambiente',
+  oque:'Um som contínuo lembra o barulho de dentro da barriga da mãe e abafa os ruídos da casa. Pesquisas antigas já mostravam bebês adormecendo mais rápido com ruído branco.',
+  passos:['Escolha um som contínuo (ruído branco, marrom, chuva ou ventilador).','Volume baixo, como um chuveiro ligado no outro cômodo.','Celular longe do berço, a pelo menos 2 metros.','Use o timer para desligar sozinho.'],
+  cuidado:'Nunca coloque o aparelho dentro do berço ou em volume alto.',som:'marrom'},
+ {id:'dreamfeed',nome:'Mamada do sonho',pais:'Reino Unido e EUA',flag:'🇬🇧',idade:'0 a 8 meses',cat:'Toque, som e ambiente',
+  oque:'Uma mamada oferecida com o bebê ainda sonolento, pouco antes de VOCÊ ir dormir. Pode ajudar ele a aguentar um trecho maior da madrugada.',
+  passos:['Entre 22h e 23h, pegue o bebê com calma, sem acender a luz forte.','Ofereça o peito ou a mamadeira com ele ainda sonolento.','Coloque para arrotar e volte ao berço.'],
+  cuidado:'Se ele acordar muito agitado com isso, não é para ele: tudo bem parar.'},
+ {id:'naninha',nome:'Naninha (objeto de conforto)',pais:'Inglaterra',flag:'🇬🇧',idade:'No berço só depois de 12 meses',cat:'Toque, som e ambiente',
+  oque:'O pediatra inglês Donald Winnicott descreveu o "objeto de transição": um paninho ou bichinho que dá segurança na separação da hora de dormir.',
+  passos:['Escolha um paninho pequeno e respirável ou um bichinho sem peças soltas.','Antes de 1 ano: use só no colo, durante o ritual.','Depois de 1 ano: pode ir para o berço junto com ele.'],
+  cuidado:'Pela Sociedade Brasileira de Pediatria, NADA solto no berço antes de 1 ano.'},
+ {id:'quarto',nome:'Mesmo quarto, cama separada',pais:'Japão e Finlândia',flag:'🇯🇵',idade:'Todas as idades',cat:'Toque, som e ambiente',
+  oque:'No Japão é tradição dormir perto das crianças; na Finlândia, o bebê ganha a famosa "caixa do bebê", com superfície firme e plana. Juntando o melhor dos dois com as recomendações de sono seguro: perto de você, mas no próprio berço.',
+  passos:['Berço no quarto dos pais, de preferência até os 6 meses a 1 ano.','Colchão firme, plano e com lençol bem justo.','Bebê sempre de barriga para cima.','Nada de travesseiro, protetor, cobertor solto ou bichinhos no berço.'],
+  cuidado:'Não durma com o bebê na sua cama, no sofá ou na poltrona.'}
+];
+
+const IDADES = [
+ {id:'6-8',nome:'6 a 8 meses',total:'12 a 15 horas por dia',sonecas:'2 a 3 sonecas',janela:'2 a 3 horas acordado entre os sonos',
+  dia:[['07:00','Acordar e primeira mamada'],['08:00','Café da manhã'],['09:00','Soneca 1 (cerca de 1h a 1h30)'],['10:30','Mamada / brincar'],['12:00','Almoço'],['12:45','Soneca 2 (cerca de 1h a 1h30)'],['15:00','Lanche da tarde'],['16:30','Soneca 3 curta (opcional, até 40 min)'],['17:45','Jantarzinho'],['18:45','Ritual: banho, massagem, pijama'],['19:15','Mamada e cantiga'],['19:30','Berço']]},
+ {id:'9-12',nome:'9 a 12 meses',total:'12 a 15 horas por dia',sonecas:'2 sonecas',janela:'2h30 a 3h30 acordado entre os sonos',
+  dia:[['07:00','Acordar e mamada'],['07:45','Café da manhã'],['09:30','Soneca 1 (cerca de 1h a 1h30)'],['11:30','Almoço'],['13:30','Soneca 2 (cerca de 1h a 1h30)'],['15:30','Lanche da tarde'],['17:45','Jantarzinho'],['18:45','Ritual: banho, massagem, pijama'],['19:15','Mamada e cantiga'],['19:30','Berço']]},
+ {id:'12-18',nome:'12 a 18 meses',total:'11 a 14 horas por dia',sonecas:'1 a 2 sonecas (fase de transição)',janela:'3 a 5 horas acordado entre os sonos',
+  dia:[['07:00','Acordar'],['07:30','Café da manhã'],['09:30','Lanche da manhã'],['11:30','Almoço'],['12:30','Soneca (cerca de 1h30 a 2h)'],['15:00','Lanche da tarde'],['18:00','Jantarzinho'],['19:00','Ritual: banho, massagem, pijama'],['19:30','Leitinho, história e cantiga'],['19:45','Berço']]},
+ {id:'18-24',nome:'18 a 24 meses',total:'11 a 14 horas por dia',sonecas:'1 soneca',janela:'5 a 6 horas acordado entre os sonos',
+  dia:[['07:00','Acordar'],['07:30','Café da manhã'],['09:30','Lanche da manhã'],['11:30','Almoço'],['12:30','Soneca (cerca de 1h30 a 2h)'],['15:00','Lanche da tarde'],['18:00','Jantarzinho'],['19:00','Ritual: banho, massagem, pijama'],['19:45','História e cantiga'],['20:00','Cama']]}
+];
+
+const SINAIS = ['Bocejos','Coçar os olhos ou as orelhas','Olhar parado, "longe"','Ficar mais choroso ou irritado','Perder o interesse nos brinquedos','Esfregar o rosto em você'];
+
+const JANTARES = [
+ {nome:'Creme de abóbora com aveia',e:'🎃',idade:'A partir de 6 meses',ing:['1 xícara de abóbora cabotiá em cubos','1 colher (sopa) de aveia em flocos finos','1 fio de azeite','Água para cozinhar'],
+  modo:['Cozinhe a abóbora em pouca água até ficar bem macia.','Amasse com o garfo e volte para a panela.','Junte a aveia e mexa por 2 minutos, até engrossar.','Finalize com um fio de azeite e sirva morno.']},
+ {nome:'Batata-doce com frango desfiado',e:'🍠',idade:'A partir de 6 meses',ing:['1 batata-doce pequena','2 colheres (sopa) de frango cozido e desfiado bem fino','Cheiro-verde picadinho','1 fio de azeite'],
+  modo:['Cozinhe a batata-doce até ficar macia e amasse.','Misture o frango bem desfiadinho.','Finalize com o cheiro-verde e o azeite.']},
+ {nome:'Mingau de aveia com banana',e:'🍌',idade:'A partir de 6 meses',ing:['3 colheres (sopa) de aveia em flocos finos','150 ml do leite que o bebê já toma (ou água)','½ banana bem madura amassada','1 pitada de canela (opcional)'],
+  modo:['Leve a aveia e o leite ao fogo baixo, mexendo sempre.','Quando engrossar, desligue e misture a banana.','A banana adoça: não precisa de açúcar.']},
+ {nome:'Sopinha de mandioquinha com cenoura e carne',e:'🥕',idade:'A partir de 6 meses',ing:['1 mandioquinha','½ cenoura','2 colheres (sopa) de carne moída magra','Cebola e cheiro-verde a gosto'],
+  modo:['Refogue a cebola com um fio de azeite e junte a carne.','Acrescente a mandioquinha e a cenoura em cubos e cubra com água.','Cozinhe até tudo ficar macio.','Amasse com o garfo na textura da fase do seu bebê.']},
+ {nome:'Purê de inhame com abobrinha',e:'🥒',idade:'A partir de 6 meses',ing:['1 inhame médio','½ abobrinha','1 fio de azeite','Salsinha'],
+  modo:['Cozinhe o inhame e a abobrinha até ficarem macios.','Amasse tudo junto.','Finalize com azeite e salsinha.']},
+ {nome:'Arroz cremoso de legumes',e:'🍚',idade:'A partir de 8 meses',ing:['3 colheres (sopa) de arroz bem cozido','2 colheres (sopa) de abobrinha e cenoura raladas','1 colher (sopa) de frango desfiado','Caldo caseiro de legumes'],
+  modo:['Coloque o arroz, os legumes e um pouco de caldo na panela.','Cozinhe em fogo baixo, mexendo, até ficar cremoso.','Junte o frango e sirva morno.']}
+];
+const JANTAR_DICAS = ['Jante sempre no mesmo horário, 1h a 1h30 antes de dormir.','Prefira comidas leves e mornas: cremes, purês, sopinhas.','Antes de 1 ano: sem sal, sem açúcar e sem mel.','Evite telas e brincadeiras agitadas depois do jantar.','Respeite a textura e a quantidade da fase do seu bebê.'];
+
+const SEGURANCA_SONO = ['Sempre de barriga para cima para dormir, em todos os sonos.','Colchão firme e plano, com lençol bem justo.','Nada solto no berço: travesseiro, protetor, cobertor, bichinhos ou paninhos (antes de 1 ano).','Berço no quarto dos pais, mas cada um na sua cama.','Não durma com o bebê no sofá ou na poltrona.','Roupa adequada à temperatura: o bebê não deve suar.','Ambiente sem fumaça de cigarro.'];
+const SEGURANCA_MASSAGEM = ['Use óleo vegetal neutro (coco, semente de uva ou óleo próprio para bebê). Teste antes num pedacinho da pele.','Evite óleos essenciais e óleo de mostarda em bebês.','Não massageie com febre, feridas, alergia na pele ou logo depois de vacinar (evite o local da vacina por 48 horas).','Espere de 30 a 45 minutos depois de mamar ou comer.','Mãos mornas, unhas curtas, sem anéis.','Pare se o bebê chorar, virar o rosto ou ficar tenso: ele está dizendo "agora não".','Na moleira, só toque bem leve, nunca pressione.','Massagens de bruços só no seu colo e com você atenta.'];
+const AVISO = 'Conteúdo educativo sobre rotina, toque e hábitos. Não substitui a orientação do pediatra. Febre, choro inconsolável, dificuldade para respirar ou qualquer sinal de doença: procure atendimento.';
+
+/* ================= CANTIGAS (caixinha de música) =================
+   Notas MIDI e duração em tempos. 0 = pausa. */
+const CANTIGAS = [
+ {id:'brahms',nome:'Canção de Ninar de Brahms',orig:'Alemanha, 1868 · domínio público',bpm:84,emoji:'🌙',
+  notas:[[64,1],[64,1],[67,3],[64,1],[64,1],[67,3],[64,1],[67,1],[72,2],[71,2],[69,2],[69,2],[67,2],[62,1],[64,1],[65,2],[62,2],[62,1],[64,1],[65,4],[62,1],[65,1],[71,1],[69,1],[67,2],[71,2],[72,4],
+         [60,1],[60,1],[72,4],[69,1],[65,1],[67,4],[64,1],[60,1],[65,2],[67,2],[69,2],[67,4],[60,1],[60,1],[72,4],[69,1],[65,1],[67,4],[64,1],[60,1],[65,2],[64,1],[62,1],[60,4],[0,2]]},
+ {id:'brilha',nome:'Brilha, Brilha, Estrelinha',orig:'França, séc. XVIII · domínio público',bpm:76,emoji:'⭐',
+  notas:[[60,1],[60,1],[67,1],[67,1],[69,1],[69,1],[67,2],[65,1],[65,1],[64,1],[64,1],[62,1],[62,1],[60,2],[67,1],[67,1],[65,1],[65,1],[64,1],[64,1],[62,2],[67,1],[67,1],[65,1],[65,1],[64,1],[64,1],[62,2],[60,1],[60,1],[67,1],[67,1],[69,1],[69,1],[67,2],[65,1],[65,1],[64,1],[64,1],[62,1],[62,1],[60,2],[0,2]]},
+ {id:'frei',nome:'Frei Martinho (bem devagar)',orig:'França · domínio público',bpm:66,emoji:'🔔',
+  notas:[[60,1],[62,1],[64,1],[60,1],[60,1],[62,1],[64,1],[60,1],[64,1],[65,1],[67,2],[64,1],[65,1],[67,2],[67,.5],[69,.5],[67,.5],[65,.5],[64,1],[60,1],[67,.5],[69,.5],[67,.5],[65,.5],[64,1],[60,1],[60,1],[55,1],[60,2],[60,1],[55,1],[60,2],[0,2]]},
+ {id:'noitefeliz',nome:'Noite Feliz',orig:'Áustria, 1818 · domínio público',bpm:72,emoji:'🕯️',
+  notas:[[55,1.5],[57,.5],[55,1],[52,3],[55,1.5],[57,.5],[55,1],[52,3],[62,2],[62,1],[59,3],[60,2],[60,1],[55,3],[57,2],[57,1],[60,1.5],[59,.5],[57,1],[55,1.5],[57,.5],[55,1],[52,3],[57,2],[57,1],[60,1.5],[59,.5],[57,1],[55,1.5],[57,.5],[55,1],[52,3],[62,2],[62,1],[65,1.5],[62,.5],[59,1],[60,3],[64,3],[60,1.5],[55,.5],[52,1],[55,1.5],[53,.5],[50,1],[48,6],[0,3]]},
+ {id:'luar',nome:'Ao Luar (Au Clair de la Lune)',orig:'França, séc. XVIII · domínio público',bpm:70,emoji:'🌕',
+  notas:[[60,1],[60,1],[60,1],[62,1],[64,2],[62,2],[60,1],[64,1],[62,1],[62,1],[60,4],[60,1],[60,1],[60,1],[62,1],[64,2],[62,2],[60,1],[64,1],[62,1],[62,1],[60,4],
+         [62,1],[62,1],[62,1],[62,1],[57,2],[57,2],[62,1],[60,1],[59,1],[57,1],[55,4],[60,1],[60,1],[60,1],[62,1],[64,2],[62,2],[60,1],[64,1],[62,1],[62,1],[60,4],[0,2]]},
+ {id:'graca',nome:'Amazing Grace',orig:'Estados Unidos, 1835 · domínio público',bpm:66,emoji:'🕊️',
+  notas:[[55,1],[60,2],[64,.5],[60,.5],[64,2],[62,1],[60,2],[57,1],[55,2],[55,1],[60,2],[64,.5],[60,.5],[64,2],[62,1],[67,5],[64,1],[67,2],[64,.5],[60,.5],[64,2],[62,1],[60,2],[57,1],[55,2],[55,1],[60,2],[64,.5],[60,.5],[64,2],[62,1],[60,5],[0,2]]},
+ {id:'greensleeves',nome:'Greensleeves',orig:'Inglaterra, séc. XVI · domínio público',bpm:84,emoji:'🍃',
+  baixo:[[57,3],[55,3],[57,3],[52,3],[57,3],[55,3],[57,1.5],[52,1.5],[57,3]],
+  notas:[[57,1],[60,2],[62,1],[64,1.5],[65,.5],[64,1],[62,2],[59,1],[55,1.5],[57,.5],[59,1],[60,2],[57,1],[57,1.5],[56,.5],[57,1],[59,2],[56,1],[52,2],[57,1],[60,2],[62,1],[64,1.5],[65,.5],[64,1],[62,2],[59,1],[55,1.5],[57,.5],[59,1],[60,1.5],[59,.5],[57,1],[56,1.5],[54,.5],[56,1],[57,3],[0,2]]},
+ {id:'canon',nome:'Cânone de Pachelbel',orig:'Alemanha, séc. XVII · domínio público',bpm:62,emoji:'🎻',
+  baixo:[[62,2],[57,2],[59,2],[54,2],[55,2],[50,2],[55,2],[57,2]],
+  notas:[[66,2],[64,2],[62,2],[61,2],[59,2],[57,2],[59,2],[61,2],[62,2],[61,2],[59,2],[57,2],[55,2],[54,2],[55,2],[52,2]]},
+ {id:'lua',nome:'Caixinha da Lua',orig:'Original Noite Tranquila',bpm:60,emoji:'🌛',seed:7},
+ {id:'nuvem',nome:'Nuvem de Algodão',orig:'Original Noite Tranquila',bpm:56,emoji:'☁️',seed:21},
+ {id:'barquinho',nome:'Barquinho no Mar',orig:'Original Noite Tranquila',bpm:63,emoji:'⛵',seed:42},
+ {id:'estrela',nome:'Estrela Sonolenta',orig:'Original Noite Tranquila',bpm:58,emoji:'✨',seed:88},
+ {id:'ursinho',nome:'Ursinho Dorminhoco',orig:'Original Noite Tranquila',bpm:54,emoji:'🧸',seed:133},
+ {id:'ninho',nome:'Ninho de Passarinho',orig:'Original Noite Tranquila',bpm:62,emoji:'🐦',seed:217},
+ {id:'ceu',nome:'Céu de Estrelas',orig:'Original Noite Tranquila',bpm:57,emoji:'🌌',seed:305}
+];
+
+const SONS = [
+ {id:'branco',nome:'Ruído branco',emoji:'📻',desc:'Som contínuo e uniforme'},
+ {id:'rosa',nome:'Ventilador',emoji:'🌀',desc:'Ruído suave, como um ventilador'},
+ {id:'marrom',nome:'Ruído marrom',emoji:'🟤',desc:'Grave e profundo, lembra a barriga'},
+ {id:'chuva',nome:'Chuva',emoji:'🌧️',desc:'Chuva calma na janela'},
+ {id:'mar',nome:'Ondas do mar',emoji:'🌊',desc:'Ondas indo e vindo devagar'},
+ {id:'shhh',nome:'Shhh',emoji:'🤫',desc:'O "shhh" ritmado que acalma'},
+ {id:'coracao',nome:'Batimento do coração',emoji:'💗',desc:'Como dentro da barriga da mamãe'}
+];
+
+/* ================= MOTOR DE ÁUDIO (100% gerado no aparelho, funciona offline) ================= */
+const Audio2 = (() => {
+  let ctx = null, master, musicBus, soundBus, reverb, wet;
+  const st = { cantiga: null, som: null, musicVol: .7, soundVol: .6, timerEnd: 0, timerTotal: 0, onchange: () => {} };
+  let seq = null, soundNodes = null, timerIv = null;
+
+  function init() {
+    if (ctx) { if (ctx.state === 'suspended') ctx.resume(); return; }
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    master = ctx.createGain(); master.gain.value = 1; master.connect(ctx.destination);
+    musicBus = ctx.createGain(); musicBus.gain.value = st.musicVol;
+    soundBus = ctx.createGain(); soundBus.gain.value = st.soundVol;
+    reverb = ctx.createConvolver(); reverb.buffer = makeIR(2.6);
+    wet = ctx.createGain(); wet.gain.value = .35;
+    musicBus.connect(master); musicBus.connect(reverb); reverb.connect(wet); wet.connect(master);
+    soundBus.connect(master);
+  }
+  function makeIR(sec) {
+    const len = ctx.sampleRate * sec, b = ctx.createBuffer(2, len, ctx.sampleRate);
+    for (let c = 0; c < 2; c++) { const d = b.getChannelData(c); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3); }
+    return b;
+  }
+  const mtof = m => 440 * Math.pow(2, (m - 69) / 12);
+
+  /* Caixinha de música: parciais senoidais com decaimento rápido */
+  function tine(m, t, vel = 1) {
+    const f = mtof(m + 12), out = ctx.createGain();
+    out.gain.value = .16 * vel; out.connect(musicBus);
+    [[1, 1, 2.2], [2, .28, .8], [3.01, .07, .35], [5.4, .03, .15]].forEach(([mul, g, dec]) => {
+      const o = ctx.createOscillator(), e = ctx.createGain();
+      o.type = 'sine'; o.frequency.value = f * mul;
+      e.gain.setValueAtTime(0, t); e.gain.linearRampToValueAtTime(g, t + .004);
+      e.gain.exponentialRampToValueAtTime(.0001, t + dec);
+      o.connect(e); e.connect(out); o.start(t); o.stop(t + dec + .05);
+    });
+  }
+  /* Notinha grave e macia para acompanhar */
+  function bass(m, t, dur) {
+    const o = ctx.createOscillator(), e = ctx.createGain();
+    o.type = 'triangle'; o.frequency.value = mtof(m - 12);
+    e.gain.setValueAtTime(0, t); e.gain.linearRampToValueAtTime(.05, t + .05);
+    e.gain.exponentialRampToValueAtTime(.0001, t + dur);
+    o.connect(e); e.connect(musicBus); o.start(t); o.stop(t + dur + .1);
+  }
+
+  /* Melodias originais geradas por semente (pentatônica, sempre suaves) */
+  function rng(seed) { let s = seed * 9301 + 49297; return () => (s = (s * 9301 + 49297) % 233280) / 233280; }
+  function gerarMelodia(seed) {
+    const r = rng(seed), esc = [60, 62, 64, 67, 69, 72, 74, 76];
+    const frase = () => { let i = 2 + Math.floor(r() * 3); const out = [];
+      for (let k = 0; k < 7; k++) { i = Math.max(0, Math.min(esc.length - 1, i + [-2, -1, -1, 1, 1, 2, 0][Math.floor(r() * 7)])); out.push([esc[i], r() < .3 ? 2 : 1]); }
+      return out; };
+    const A = frase(), B = frase(), C = frase();
+    const fimA = [[64, 1], [62, 1], [60, 3]], fimB = [[67, 1], [64, 1], [62, 3]];
+    return [...A, ...fimB, ...A, ...fimA, ...B, ...fimB, ...C, ...fimA, [0, 2]];
+  }
+  CANTIGAS.forEach(c => { if (!c.notas) c.notas = gerarMelodia(c.seed); });
+
+  function playCantiga(id) {
+    init(); stopCantiga(false);
+    const c = CANTIGAS.find(x => x.id === id); if (!c) return;
+    const beat = 60 / c.bpm; let idx = 0, next = ctx.currentTime + .15, beatCount = 0, bi = 0, bt = 0;
+    const roots = { 60: 1, 62: 1, 64: 1, 65: 1, 67: 1 };
+    seq = setInterval(() => {
+      while (next < ctx.currentTime + .25) {
+        const [m, d] = c.notas[idx];
+        if (m) { tine(m, next, .85 + Math.random() * .15); }
+        if (c.baixo) { if (idx === 0) { bi = 0; bt = next; } while (bt <= next + 1e-6) { const [bm, bd] = c.baixo[bi % c.baixo.length]; bass(bm, bt, beat * bd * 1.1); bt += bd * beat; bi++; } }
+        else if (m && beatCount % 4 === 0) bass(m >= 67 ? 55 : (m >= 64 ? 52 : 48), next, beat * 3.5);
+        beatCount += d; next += d * beat;
+        idx = (idx + 1) % c.notas.length;
+      }
+    }, 40);
+    st.cantiga = id; st.onchange();
+  }
+  function stopCantiga(notify = true) { if (seq) clearInterval(seq); seq = null; st.cantiga = null; if (notify) st.onchange(); }
+
+  /* Ruídos */
+  function noiseBuf(kind, sec = 6) {
+    const len = ctx.sampleRate * sec, b = ctx.createBuffer(2, len, ctx.sampleRate);
+    for (let c = 0; c < 2; c++) {
+      const d = b.getChannelData(c); let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0, last = 0;
+      for (let i = 0; i < len; i++) {
+        const w = Math.random() * 2 - 1;
+        if (kind === 'white') d[i] = w * .35;
+        else if (kind === 'pink') { b0 = .99886 * b0 + w * .0555179; b1 = .99332 * b1 + w * .0750759; b2 = .969 * b2 + w * .153852; b3 = .8665 * b3 + w * .3104856; b4 = .55 * b4 + w * .5329522; b5 = -.7616 * b5 - w * .016898; d[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + w * .5362) * .09; b6 = w * .115926; }
+        else { last = (last + .02 * w) / 1.02; d[i] = last * 3.2; }
+      }
+      // suaviza a emenda do loop
+      const f = 2000; for (let i = 0; i < f; i++) { const k = i / f; d[i] = d[i] * k + d[len - f + i] * (1 - k); }
+    }
+    return b;
+  }
+  function src(kind) { const s = ctx.createBufferSource(); s.buffer = noiseBuf(kind); s.loop = true; return s; }
+
+  function playSom(id) {
+    init(); stopSom(false);
+    const out = ctx.createGain(); out.gain.setValueAtTime(0, ctx.currentTime); out.gain.linearRampToValueAtTime(1, ctx.currentTime + 2); out.connect(soundBus);
+    const nodes = { out, stop: [], iv: null };
+    const add = s => { s.start(); nodes.stop.push(s); return s; };
+    if (id === 'branco') { const s = add(src('white')); const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 9000; s.connect(lp); lp.connect(out); }
+    if (id === 'rosa') { const s = add(src('pink')); s.connect(out); }
+    if (id === 'marrom') { const s = add(src('brown')); s.connect(out); }
+    if (id === 'chuva') {
+      const s = add(src('pink')), hp = ctx.createBiquadFilter(), g = ctx.createGain();
+      hp.type = 'highpass'; hp.frequency.value = 700; g.gain.value = .9; s.connect(hp); hp.connect(g); g.connect(out);
+      const s2 = add(src('brown')), g2 = ctx.createGain(); g2.gain.value = .5; s2.connect(g2); g2.connect(out);
+      const gotas = ctx.createGain(); gotas.gain.value = .5; gotas.connect(out);
+      const buf = noiseBuf('white', .05);
+      nodes.iv = setInterval(() => { for (let k = 0; k < 4; k++) { const t = ctx.currentTime + Math.random() * .25;
+        const b = ctx.createBufferSource(), bp = ctx.createBiquadFilter(), e = ctx.createGain();
+        b.buffer = buf; bp.type = 'bandpass'; bp.frequency.value = 1800 + Math.random() * 3500; bp.Q.value = 6;
+        e.gain.setValueAtTime(.0001, t); e.gain.exponentialRampToValueAtTime(.25 * Math.random() + .05, t + .003); e.gain.exponentialRampToValueAtTime(.0001, t + .04);
+        b.connect(bp); bp.connect(e); e.connect(gotas); b.start(t); b.stop(t + .05); } }, 250);
+    }
+    if (id === 'mar') {
+      const s = add(src('brown')), s2 = add(src('pink')), g = ctx.createGain(), lp = ctx.createBiquadFilter();
+      lp.type = 'lowpass'; lp.frequency.value = 1200; g.gain.value = .3;
+      s.connect(g); s2.connect(lp); lp.connect(g); g.connect(out);
+      const lfo = ctx.createOscillator(), lg = ctx.createGain(); lfo.frequency.value = 1 / 9; lg.gain.value = .28; lfo.connect(lg); lg.connect(g.gain); add(lfo);
+      const lfo2 = ctx.createOscillator(), lg2 = ctx.createGain(); lfo2.frequency.value = 1 / 9; lg2.gain.value = 700; lfo2.connect(lg2); lg2.connect(lp.frequency); add(lfo2);
+    }
+    if (id === 'shhh') {
+      const s = add(src('white')), bp = ctx.createBiquadFilter(), g = ctx.createGain();
+      bp.type = 'bandpass'; bp.frequency.value = 3500; bp.Q.value = .7; g.gain.value = 0; s.connect(bp); bp.connect(g); g.connect(out);
+      let t = ctx.currentTime + .2;
+      const sched = () => { while (t < ctx.currentTime + 3) { g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(1.1, t + .25); g.gain.setValueAtTime(1.1, t + 1.1); g.gain.linearRampToValueAtTime(0, t + 1.6); t += 2.1; } };
+      sched(); nodes.iv = setInterval(sched, 1000);
+    }
+    if (id === 'coracao') {
+      const bpm = 70, per = 60 / bpm; let t = ctx.currentTime + .2;
+      const thump = (tt, v) => { const o = ctx.createOscillator(), e = ctx.createGain(), lp = ctx.createBiquadFilter();
+        o.type = 'sine'; o.frequency.setValueAtTime(70, tt); o.frequency.exponentialRampToValueAtTime(38, tt + .12);
+        lp.type = 'lowpass'; lp.frequency.value = 180;
+        e.gain.setValueAtTime(.0001, tt); e.gain.exponentialRampToValueAtTime(v, tt + .015); e.gain.exponentialRampToValueAtTime(.0001, tt + .2);
+        o.connect(lp); lp.connect(e); e.connect(out); o.start(tt); o.stop(tt + .25); };
+      const bed = add(src('brown')), bg = ctx.createGain(); bg.gain.value = .25; bed.connect(bg); bg.connect(out);
+      const sched = () => { while (t < ctx.currentTime + 2) { thump(t, 1.4); thump(t + .28, .9); t += per; } };
+      sched(); nodes.iv = setInterval(sched, 500);
+    }
+    soundNodes = nodes; st.som = id; st.onchange();
+  }
+  function stopSom(notify = true) {
+    if (soundNodes) { const n = soundNodes; clearInterval(n.iv); const t = ctx.currentTime;
+      n.out.gain.cancelScheduledValues(t); n.out.gain.setValueAtTime(n.out.gain.value, t); n.out.gain.linearRampToValueAtTime(0, t + .4);
+      setTimeout(() => { n.stop.forEach(s => { try { s.stop(); } catch (e) {} }); n.out.disconnect(); }, 500); }
+    soundNodes = null; st.som = null; if (notify) st.onchange();
+  }
+
+  function setVol(kind, v) { st[kind + 'Vol'] = v; if (!ctx) return; (kind === 'music' ? musicBus : soundBus).gain.setTargetAtTime(v, ctx.currentTime, .05); }
+
+  /* Timer com fade-out de 30s */
+  function setTimer(min) {
+    clearInterval(timerIv); st.timerEnd = 0; st.timerTotal = 0;
+    if (min) { st.timerTotal = min * 60000; st.timerEnd = Date.now() + st.timerTotal;
+      timerIv = setInterval(() => {
+        const left = st.timerEnd - Date.now();
+        if (ctx && left < 30000 && left > 0) master.gain.setTargetAtTime(Math.max(0, left / 30000), ctx.currentTime, .3);
+        if (left <= 0) { stopAll(); clearInterval(timerIv); st.timerEnd = 0; if (ctx) master.gain.setTargetAtTime(1, ctx.currentTime + 1, .1); }
+        st.onchange();
+      }, 1000); }
+    if (ctx) master.gain.setTargetAtTime(1, ctx.currentTime, .1);
+    st.onchange();
+  }
+  function stopAll() { stopCantiga(false); stopSom(false); st.onchange(); }
+  function chime() { init(); const t = ctx.currentTime + .02; tine(72, t, .5); tine(79, t + .18, .4); }
+
+  return { st, init, playCantiga, stopCantiga, playSom, stopSom, setVol, setTimer, stopAll, chime, get ctx() { return ctx; } };
+})();
+
+/* ================= APP NOITE TRANQUILA ================= */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+/* ---------- armazenamento seguro ---------- */
+const DB = {
+  get(k, d) { try { const v = localStorage.getItem('nt_' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem('nt_' + k, JSON.stringify(v)); } catch (e) {} }
+};
+const S = {
+  perfil: DB.get('perfil', null),            // {nome, nasc:'2026-03'}
+  prefs: DB.get('prefs', { tema: 'auto', voz: false, musica: true, cantigaMassagem: 'brahms' }),
+  favs: DB.get('favs', []),
+  ritual: DB.get('ritual', {}),
+  diario: DB.get('diario', []),
+  dormindo: DB.get('dormindo', null),
+  feitas: DB.get('feitas', {})               // massagens concluídas por dia
+};
+const save = k => DB.set(k, S[k]);
+
+/* ---------- utilidades ---------- */
+const hoje = (d = new Date()) => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+const hhmm = ts => { const d = new Date(ts); return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0'); };
+const dur = ms => { const m = Math.round(ms / 60000), h = Math.floor(m / 60); return h ? h + 'h' + (m % 60 ? String(m % 60).padStart(2, '0') : '') : m + ' min'; };
+const mmss = s => Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+function idadeMeses() { if (!S.perfil || !S.perfil.nasc) return null; const [y, m] = S.perfil.nasc.split('-').map(Number); const n = new Date(); return (n.getFullYear() - y) * 12 + (n.getMonth() + 1 - m); }
+function idadeTxt() { const m = idadeMeses(); if (m == null) return ''; if (m < 1) return 'recém-nascido'; if (m < 24) return m + (m === 1 ? ' mês' : ' meses'); const a = Math.floor(m / 12), r = m % 12; return a + ' anos' + (r ? ' e ' + r + (r === 1 ? ' mês' : ' meses') : ''); }
+function faixaId() { const m = idadeMeses(); if (m == null || m < 9) return '6-8'; if (m < 12) return '9-12'; if (m < 18) return '12-18'; return '18-24'; }
+const nomeBebe = () => (S.perfil && S.perfil.nome) ? S.perfil.nome : 'seu bebê';
+function saud() { const h = new Date().getHours(); return h < 5 ? 'Boa madrugada' : h < 12 ? 'Bom dia' : h < 18 ? 'Boa tarde' : 'Boa noite'; }
+function diaDoAno() { const n = new Date(); return Math.floor((n - new Date(n.getFullYear(), 0, 0)) / 864e5); }
+function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('show'), 2200); }
+const M = id => MASSAGENS.find(m => m.id === id);
+
+/* ---------- ilustração do bebê ---------- */
+function babySVG(passo, opts = {}) {
+  const z = new Set(passo ? passo.z : []), back = passo && passo.back;
+  const on = k => z.has(k) ? ' on' : '';
+  const anim = opts.anim !== false;
+  let paths = '', hands = '';
+  if (passo && passo.p && passo.p.length && !passo.hold) {
+    passo.p.forEach((d, i) => {
+      paths += `<path class="path" d="${d}"/>`;
+      if (anim) hands += `<circle class="hand" r="8"><animateMotion dur="${opts.dur || 3.2}s" repeatCount="indefinite" begin="${(i * .35).toFixed(2)}s" path="${d}" calcMode="spline" keyTimes="0;1" keySplines=".45 0 .55 1"/></circle>`;
+    });
+  }
+  if (passo && passo.hold && passo.z.length) {
+    const pos = { barriga: [100, 140], peito: [100, 108], cabeca: [100, 34], peD: [127, 276], peE: [73, 276], costas: [100, 130] };
+    passo.z.forEach(k => { const p = pos[k]; if (p) hands += `<ellipse class="holdhand" cx="${p[0]}" cy="${p[1]}" rx="17" ry="12"/>`; });
+  }
+  const face = back
+    ? `<path d="M76,40 Q100,22 124,40" stroke="#b07a55" stroke-width="5" fill="none" stroke-linecap="round" opacity=".55"/><path d="M100,92 L100,176" stroke="#d9a785" stroke-width="2" stroke-dasharray="3 5"/>`
+    : `<path class="face" d="M84,58 q6,4 12,0"/><path class="face" d="M104,58 q6,4 12,0"/><path class="face" d="M93,70 q7,5 14,0"/><circle cx="82" cy="66" r="5" fill="#ff8fab" opacity=".45"/><circle cx="118" cy="66" r="5" fill="#ff8fab" opacity=".45"/><path d="M92,28 q8,-8 14,0" stroke="#b07a55" stroke-width="3" fill="none" stroke-linecap="round"/>`;
+  return `<svg class="baby" viewBox="0 0 200 300" role="img" aria-label="Ilustração do bebê com a área da massagem destacada">
+   <line class="limb" x1="117" y1="178" x2="125" y2="264" stroke-width="22"/><line class="limb" x1="83" y1="178" x2="75" y2="264" stroke-width="22"/>
+   <ellipse class="body" cx="128" cy="276" rx="10" ry="13"/><ellipse class="body" cx="72" cy="276" rx="10" ry="13"/>
+   <line class="limb" x1="132" y1="98" x2="164" y2="168" stroke-width="17"/><line class="limb" x1="68" y1="98" x2="36" y2="168" stroke-width="17"/>
+   <circle class="body" cx="167" cy="176" r="10"/><circle class="body" cx="33" cy="176" r="10"/>
+   <path class="body" d="M70,94 Q100,80 130,94 L134,168 Q100,194 66,168 Z"/>
+   <path d="M68,162 Q100,186 132,162 L130,184 Q100,200 70,184 Z" fill="#ffffff" opacity=".92"/>
+   <rect class="body" x="90" y="76" width="20" height="14" rx="6"/>
+   <circle class="body" cx="100" cy="55" r="30"/>
+   ${face}
+   <ellipse class="zone${on('rosto')}" cx="100" cy="64" rx="22" ry="14"/>
+   <ellipse class="zone${on('testa')}" cx="100" cy="42" rx="24" ry="11"/>
+   <circle class="zone${on('cabeca')}" cx="100" cy="50" r="33"/>
+   <ellipse class="zone${on('peito')}" cx="100" cy="108" rx="29" ry="15"/>
+   <ellipse class="zone${on('barriga')}" cx="100" cy="142" rx="27" ry="22"/>
+   <path class="zone${on('costas')}" d="M70,94 Q100,80 130,94 L134,168 Q100,194 66,168 Z"/>
+   <line class="zl${on('bracoD')}" x1="132" y1="98" x2="164" y2="168" stroke="#ffd36b" stroke-opacity="0" stroke-width="22" stroke-linecap="round"/>
+   <line class="zl${on('bracoE')}" x1="68" y1="98" x2="36" y2="168" stroke="#ffd36b" stroke-opacity="0" stroke-width="22" stroke-linecap="round"/>
+   <line class="zl${on('pernaD')}" x1="117" y1="178" x2="125" y2="264" stroke="#ffd36b" stroke-opacity="0" stroke-width="26" stroke-linecap="round"/>
+   <line class="zl${on('pernaE')}" x1="83" y1="178" x2="75" y2="264" stroke="#ffd36b" stroke-opacity="0" stroke-width="26" stroke-linecap="round"/>
+   <circle class="zone${on('maoD')}" cx="167" cy="176" r="14"/><circle class="zone${on('maoE')}" cx="33" cy="176" r="14"/>
+   <ellipse class="zone${on('peD')}" cx="128" cy="276" rx="14" ry="17"/><ellipse class="zone${on('peE')}" cx="72" cy="276" rx="14" ry="17"/>
+   ${paths}${hands}
+  </svg>`;
+}
+
+/* ---------- roteamento ---------- */
+const routes = {};
+function go(h) { location.hash = h; }
+function render() {
+  const h = location.hash.slice(1) || 'inicio';
+  const [name, arg] = h.split('/');
+  if (!S.perfil && name !== 'onboarding') { renderOnboarding(); return; }
+  const fn = routes[name] || routes.inicio;
+  const tab = { inicio: 'inicio', massagens: 'massagens', massagem: 'massagens', ninar: 'ninar', rotina: 'rotina', tecnicas: 'rotina', tecnica: 'rotina', diario: 'diario', novo: 'diario', album: 'album', foto: 'album', novafoto: 'album', antesdepois: 'album', evolucao: 'album' }[name] || 'mais';
+  document.querySelectorAll('nav.tabs a').forEach(a => a.classList.toggle('on', a.dataset.t === tab));
+  $('nav.tabs').style.display = ''; $('header.top').style.display = '';
+  $('#view').innerHTML = `<div class="fade">${fn(arg ? decodeURIComponent(arg) : '')}</div>`;
+  if (fn.after) fn.after(arg);
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', render);
+
+/* ---------- onboarding ---------- */
+function renderOnboarding() {
+  $('nav.tabs').style.display = 'none'; $('header.top').style.display = 'none';
+  const n = new Date(), max = n.getFullYear() + '-' + String(n.getMonth() + 1).padStart(2, '0');
+  $('#view').innerHTML = `<div class="onb fade">
+    <div class="moonbig"></div>
+    <h1>Noite Tranquila</h1>
+    <p class="lead">Massagens do mundo todo, cantigas e técnicas de sono para noites mais calmas na sua casa.</p>
+    <div class="card">
+      <label class="f" for="onome">Como o seu bebê se chama?</label>
+      <input id="onome" placeholder="Ex.: Alice" maxlength="24" autocomplete="off">
+      <label class="f" for="onasc">Mês e ano em que nasceu</label>
+      <input id="onasc" type="month" max="${max}">
+      <p class="tiny" style="margin-top:8px">Usamos a idade para sugerir a rotina e as massagens certas. Fica salvo só no seu celular.</p>
+      <button class="btn block" id="ogo" style="margin-top:14px">Começar 🌙</button>
+    </div>
+    <button class="muted small" id="oskip" style="margin:6px auto">Pular por enquanto</button>
+  </div>`;
+  $('#ogo').onclick = () => { S.perfil = { nome: $('#onome').value.trim(), nasc: $('#onasc').value }; save('perfil'); go('inicio'); render(); };
+  $('#oskip').onclick = () => { S.perfil = { nome: '', nasc: '' }; save('perfil'); go('inicio'); render(); };
+}
+
+/* ---------- INÍCIO ---------- */
+routes.inicio = () => {
+  const k = hoje(), feitos = (S.ritual[k] || []).length, pct = Math.round(feitos / RITUAL.length * 100);
+  const tec = TECNICAS[diaDoAno() % TECNICAS.length], mas = MASSAGENS[(diaDoAno() * 7) % MASSAGENS.length];
+  const ultimo = [...S.diario].filter(e => e.fim).sort((a, b) => b.fim - a.fim)[0];
+  const fx = IDADES.find(i => i.id === faixaId());
+  let sug = '';
+  if (S.dormindo) sug = `<b>${esc(nomeBebe())} está dormindo</b> desde as ${hhmm(S.dormindo.ini)} (${S.dormindo.tipo}).`;
+  else if (ultimo && Date.now() - ultimo.fim < 8 * 3600e3 && idadeMeses() != null && new Date().getHours() >= 6 && new Date().getHours() < 18) {
+    const jan = { '6-8': [120, 180], '9-12': [150, 210], '12-18': [180, 300], '18-24': [300, 360] }[faixaId()];
+    sug = `Acordou às <b>${hhmm(ultimo.fim)}</b>. Pela idade, o próximo sono deve vir entre <b>${hhmm(ultimo.fim + jan[0] * 6e4)}</b> e <b>${hhmm(ultimo.fim + jan[1] * 6e4)}</b>. Fique de olho nos sinais de sono.`;
+  }
+  const r = 26, c = 2 * Math.PI * r;
+  return `
+  <div style="margin:6px 0 14px"><div class="muted small">${saud()}, mamãe 🌙</div>
+  <h1>Vamos preparar uma noite tranquila?</h1>${idadeTxt() ? `<div class="tiny" style="margin-top:4px">${esc(nomeBebe())} · ${idadeTxt()}</div>` : ''}</div>
+
+  <a class="card glow row" href="#ritual" style="text-decoration:none;color:inherit">
+    <svg class="ring" viewBox="0 0 64 64"><circle cx="32" cy="32" r="${r}" stroke="var(--card2)" stroke-width="7" fill="none"/><circle cx="32" cy="32" r="${r}" stroke="var(--moon)" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c * (1 - pct / 100)}" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" font-size="14" font-weight="700" fill="var(--tx)">${feitos}/${RITUAL.length}</text></svg>
+    <div style="flex:1"><h3>Ritual de hoje</h3><div class="small muted">${pct === 100 ? 'Ritual completo! Boa noite 💛' : feitos ? 'Continue de onde parou.' : '8 passos para o corpo entender que é hora de dormir.'}</div></div><span class="go">›</span>
+  </a>
+
+  ${sug ? `<div class="note" style="margin-bottom:14px">⏰ ${sug}</div>` : ''}
+
+  <div id="homeFoto"></div>
+  <div class="grid2">
+    <button class="qa" onclick="startRotina('noite')"><span class="e">👐</span><b>Massagem da noite</b><small>10 min guiados, passo a passo</small></button>
+    <button class="qa" onclick="abaNinar='cantigas';go('ninar')"><span class="e">🎶</span><b>Cantigas de ninar</b><small>${CANTIGAS.length} cantigas em caixinha de música</small></button>
+    <button class="qa" onclick="abaNinar='sons';go('ninar')"><span class="e">🌊</span><b>Sons para dormir</b><small>${SONS.length} sons: chuva, mar, coração...</small></button>
+    <button class="qa" onclick="go('luz')"><span class="e">🕯️</span><b>Luz noturna</b><small>Para a mamada da madrugada</small></button>
+  </div>
+
+  <div class="sec"><h3>Massagem do dia</h3><a href="#massagens">Ver todas</a></div>
+  ${massItem(mas)}
+
+  <div class="sec"><h3>Técnica do dia</h3><a href="#tecnicas">Ver as 20</a></div>
+  <a class="item" href="#tecnica/${tec.id}"><div class="ic">${tec.flag}</div><div class="bd"><b>${esc(tec.nome)}</b><small>${esc(tec.pais)} · ${esc(tec.idade)}</small></div><span class="go">›</span></a>
+
+  <div class="sec"><h3>Rotinas rápidas</h3></div>
+  ${ROTINAS.map(r => `<button class="item" onclick="startRotina('${r.id}')"><div class="ic">${r.emoji}</div><div class="bd"><b>${esc(r.nome)}</b><small>${r.min} min · ${esc(r.desc)}</small></div><span class="go">▶</span></button>`).join('')}
+
+  <div class="sec"><h3>Para esta idade</h3><a href="#rotina">Rotina completa</a></div>
+  <div class="card"><div class="kv" style="margin:0"><div><b>${fx.total.replace(' por dia', '')}</b><small>sono por dia</small></div><div><b>${fx.sonecas}</b><small>sonecas</small></div><div><b>${fx.janela.split(' acordado')[0]}</b><small>acordado</small></div></div></div>
+  <p class="footer-note">${AVISO}</p>`;
+};
+
+function massItem(m) {
+  const fav = S.favs.includes(m.id);
+  return `<a class="item" href="#massagem/${m.id}"><div class="ic">${m.flag}</div><div class="bd"><b>${esc(m.nome)}${fav ? ' 💛' : ''}</b><small>${esc(m.pais)} · ${m.min} min · ${esc(m.idade)}</small><div style="margin-top:4px"><span class="tag y">${esc(m.tag)}</span></div></div><span class="go">›</span></a>`;
+}
+
+/* ---------- MASSAGENS ---------- */
+let filtroM = 'todas';
+routes.massagens = () => {
+  const filtros = [['todas', 'Todas'], ['fav', '💛 Favoritas'], ['gases', 'Gases e cólica'], ['dormir', 'Antes de dormir'], ['bebe', 'Recém-nascido'], ['rapida', 'Até 3 min']];
+  let lista = MASSAGENS;
+  if (filtroM === 'fav') lista = lista.filter(m => S.favs.includes(m.id));
+  if (filtroM === 'gases') lista = lista.filter(m => /Gases|cólica|digest/i.test(m.tag));
+  if (filtroM === 'dormir') lista = lista.filter(m => /dormir|berço|noite|Relaxar|Rotina|Clássica|leve|pesquisa|cantiga/i.test(m.tag));
+  if (filtroM === 'bebe') lista = lista.filter(m => /nascimento|1 mês/.test(m.idade));
+  if (filtroM === 'rapida') lista = lista.filter(m => m.min <= 3);
+  return `<h1 style="margin:6px 0 4px">Massagens</h1><p class="muted small">15 massagens de 9 países, com passo a passo animado e voz guia.</p>
+  <div class="chips">${filtros.map(([k, l]) => `<button class="chip${filtroM === k ? ' on' : ''}" onclick="filtroM='${k}';render()">${l}</button>`).join('')}</div>
+  ${filtroM === 'todas' ? `<div class="sec" style="margin-top:6px"><h3>Rotinas guiadas</h3></div>
+  ${ROTINAS.map(r => `<button class="item" onclick="startRotina('${r.id}')"><div class="ic">${r.emoji}</div><div class="bd"><b>${esc(r.nome)}</b><small>${r.min} min · ${esc(r.desc)}</small></div><span class="go">▶</span></button>`).join('')}
+  <div class="sec"><h3>Todas as massagens</h3></div>` : ''}
+  ${lista.length ? lista.map(massItem).join('') : `<div class="card muted small">Nenhuma massagem aqui ainda. Toque no 💛 dentro de uma massagem para salvar nas favoritas.</div>`}
+  <a class="item" href="#seguranca"><div class="ic">🛡️</div><div class="bd"><b>Antes de começar: segurança</b><small>Óleo, horário, quando não fazer</small></div><span class="go">›</span></a>`;
+};
+
+routes.massagem = id => {
+  const m = M(id); if (!m) return routes.massagens();
+  const fav = S.favs.includes(m.id);
+  return `<button class="back" onclick="history.back()">‹ Voltar</button>
+  <div class="row between" style="align-items:flex-start"><div><div class="tiny">${m.flag} ${esc(m.pais)}</div><h1>${esc(m.nome)}</h1></div>
+  <button class="fav" onclick="toggleFav('${m.id}')" aria-label="Favoritar">${fav ? '💛' : '🤍'}</button></div>
+  <div style="margin:8px 0 14px"><span class="tag y">${esc(m.tag)}</span><span class="tag">⏱ ${m.min} min</span><span class="tag m">${esc(m.idade)}</span></div>
+  <div class="hero-ill">${babySVG(m.passos.find(p => p.p.length) || m.passos[0])}</div>
+  <p>${esc(m.intro)}</p>
+  <button class="btn block" onclick="startMassagem('${m.id}')" style="margin:12px 0 18px">▶ Começar massagem guiada</button>
+  <div class="card"><h3 style="margin-bottom:6px">Passo a passo</h3><ol class="steps">${m.passos.map(p => `<li><b>${esc(p.t)}</b>${p.rep ? ` <span class="tiny">· ${esc(p.rep)}</span>` : ''}<div class="small muted">${esc(p.d)}</div></li>`).join('')}</ol></div>
+  <div class="warn">⚠️ Óleo vegetal neutro, mãos mornas, 30 a 45 min depois de mamar. Se o bebê chorar ou virar o rosto, pare. <a href="#seguranca" style="color:var(--rose);font-weight:600">Ver cuidados</a></div>`;
+};
+function toggleFav(id) { const i = S.favs.indexOf(id); i < 0 ? S.favs.push(id) : S.favs.splice(i, 1); save('favs'); toast(i < 0 ? 'Salva nas favoritas 💛' : 'Removida das favoritas'); render(); }
+
+/* ---------- PLAYER GUIADO ---------- */
+const PL = { seq: [], i: 0, left: 0, playing: false, iv: null, nome: '', wake: null, music: false };
+function startMassagem(id) { const m = M(id); openPlayer(m.nome, m.passos.map(p => ({ m, p })), null); }
+function startRotina(id) { const r = ROTINAS.find(x => x.id === id); openPlayer(r.nome, r.itens.map(([mid, i]) => ({ m: M(mid), p: M(mid).passos[i] })), r.som); }
+async function wakeOn() { try { if ('wakeLock' in navigator) PL.wake = await navigator.wakeLock.request('screen'); } catch (e) {} }
+function wakeOff() { try { PL.wake && PL.wake.release(); } catch (e) {} PL.wake = null; }
+function openPlayer(nome, seq, som) {
+  Audio2.init();
+  Object.assign(PL, { seq, i: 0, nome, playing: true, music: S.prefs.musica });
+  const pl = document.createElement('div'); pl.className = 'player'; pl.id = 'player'; document.body.appendChild(pl);
+  document.body.style.overflow = 'hidden';
+  if (PL.music) { const cid = (som && CANTIGAS.find(c => c.id === som)) ? som : S.prefs.cantigaMassagem; if (Audio2.st.cantiga !== cid && som !== 'shhh') Audio2.playCantiga(cid); if (som === 'shhh' && !Audio2.st.som) Audio2.playSom('shhh'); }
+  wakeOn(); loadStep(); clearInterval(PL.iv); PL.iv = setInterval(tick, 1000);
+}
+function loadStep() { PL.left = PL.seq[PL.i].p.s; drawPlayer(); speak(); }
+function speak() {
+  if (!S.prefs.voz || !('speechSynthesis' in window)) return;
+  try { speechSynthesis.cancel(); const { p } = PL.seq[PL.i]; const u = new SpeechSynthesisUtterance(p.t + '. ' + p.d + (p.rep ? ' Repita: ' + p.rep + '.' : ''));
+    u.lang = 'pt-BR'; u.rate = .92; u.pitch = 1.05; const v = speechSynthesis.getVoices().find(v => /pt.BR/i.test(v.lang)); if (v) u.voice = v; speechSynthesis.speak(u); } catch (e) {}
+}
+function tick() {
+  if (!PL.playing || !$('#player')) return;
+  PL.left--; if (PL.left <= 0) { Audio2.chime(); if (PL.i < PL.seq.length - 1) { PL.i++; loadStep(); } else finishPlayer(); return; }
+  const tot = PL.seq[PL.i].p.s, c = 2 * Math.PI * 41;
+  const ring = $('#pring'); if (ring) ring.setAttribute('stroke-dashoffset', c * (PL.left / tot));
+  const t = $('#ptime'); if (t) t.textContent = mmss(PL.left) + ' neste passo · ' + mmss(PL.seq.slice(PL.i + 1).reduce((a, x) => a + x.p.s, PL.left)) + ' no total';
+  const b = $('#pbarcur'); if (b) b.style.width = (100 * (1 - PL.left / tot)) + '%';
+}
+function drawPlayer() {
+  const { m, p } = PL.seq[PL.i], c = 2 * Math.PI * 41, n = PL.seq.length;
+  $('#player').innerHTML = `
+   <div class="ptop"><button class="iconbtn" onclick="closePlayer()" aria-label="Fechar">✕</button><div class="pname">${esc(PL.nome)} · passo ${PL.i + 1} de ${n}</div><button class="iconbtn" onclick="go('luz');closePlayer(true)" aria-label="Luz noturna">🕯️</button></div>
+   <div class="pbar">${PL.seq.map((_, k) => `<i><b ${k === PL.i ? 'id="pbarcur"' : ''} style="width:${k < PL.i ? 100 : 0}%"></b></i>`).join('')}</div>
+   <div class="tiny" style="color:#a9b3d6;margin-top:4px">${m.flag} ${esc(m.nome)}</div>
+   <div class="ill">${babySVG(p)}</div>
+   <div class="stitle">${esc(p.t)}</div>${p.rep ? `<div class="rep">${esc(p.rep.toUpperCase())}</div>` : ''}
+   <div class="sdesc">${esc(p.d)}</div>
+   <div class="ctr"><button onclick="stepGo(-1)" aria-label="Anterior">⏮</button>
+     <button class="pp" onclick="togglePlay()" aria-label="Pausar">${PL.playing ? '❚❚' : '▶'}<svg viewBox="0 0 88 88"><circle cx="44" cy="44" r="41" stroke="#ffffff22" stroke-width="4" fill="none"/><circle id="pring" cx="44" cy="44" r="41" stroke="#ffd36b" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c * (PL.left / p.s)}"/></svg></button>
+     <button onclick="stepGo(1)" aria-label="Próximo">⏭</button></div>
+   <div class="time" id="ptime">${mmss(PL.left)} neste passo</div>
+   <div class="opts"><button class="${S.prefs.voz ? 'on' : ''}" onclick="togVoz()">🗣️ Voz guia</button><button class="${Audio2.st.cantiga ? 'on' : ''}" onclick="togMusicaPl()">🎶 Cantiga</button><button onclick="PL.left+=30;tick();PL.left++">+30s</button></div>`;
+}
+function stepGo(d) { const ni = PL.i + d; if (ni < 0) return; if (ni >= PL.seq.length) { finishPlayer(); return; } PL.i = ni; loadStep(); }
+function togglePlay() { PL.playing = !PL.playing; if (!PL.playing) try { speechSynthesis.cancel(); } catch (e) {} drawPlayer(); }
+function togVoz() { S.prefs.voz = !S.prefs.voz; save('prefs'); if (S.prefs.voz) speak(); else try { speechSynthesis.cancel(); } catch (e) {} drawPlayer(); toast(S.prefs.voz ? 'Voz guia ligada' : 'Voz guia desligada'); }
+function togMusicaPl() { if (Audio2.st.cantiga) Audio2.stopCantiga(); else Audio2.playCantiga(S.prefs.cantigaMassagem); drawPlayer(); }
+function finishPlayer() {
+  clearInterval(PL.iv); try { speechSynthesis.cancel(); } catch (e) {}
+  const k = hoje(); S.feitas[k] = (S.feitas[k] || 0) + 1; save('feitas');
+  const ri = RITUAL.findIndex(r => r.rotina); const arr = S.ritual[k] || []; if (!arr.includes(ri)) { arr.push(ri); S.ritual[k] = arr; save('ritual'); }
+  $('#player').innerHTML = `<div class="ptop"><button class="iconbtn" onclick="closePlayer()">✕</button><div class="pname">${esc(PL.nome)}</div><span style="width:42px"></span></div>
+   <div class="done"><div class="big">🌙</div><h2 style="margin:10px 0">Massagem concluída!</h2><p style="color:#c9d0ea">Agora pijama, luz baixa e mamada tranquila. A cantiga continua tocando, se você quiser.</p>
+   <div style="display:grid;gap:10px;margin-top:18px;max-width:340px;margin-left:auto;margin-right:auto">
+   <button class="btn" onclick="closePlayer();go('ritual')">Continuar o ritual</button>
+   <button class="btn ghost" style="color:#eef1fb;border-color:#ffffff22;background:#ffffff12" onclick="Audio2.setTimer(30);closePlayer();toast('Cantiga desliga sozinha em 30 min')">Deixar a cantiga por 30 min</button>
+   <button class="btn ghost" style="color:#eef1fb;border-color:#ffffff22;background:#ffffff12" onclick="Audio2.stopAll();closePlayer()">Parar o som e sair</button></div></div>`;
+  wakeOff();
+}
+function closePlayer(keep) { clearInterval(PL.iv); try { speechSynthesis.cancel(); } catch (e) {} const p = $('#player'); if (p) p.remove(); document.body.style.overflow = ''; wakeOff(); if (!keep) render(); }
+
+/* ---------- NINAR (cantigas + sons) ---------- */
+let abaNinar = 'cantigas';
+routes.ninar = () => {
+  const st = Audio2.st, left = st.timerEnd ? Math.max(0, Math.round((st.timerEnd - Date.now()) / 60000)) : 0;
+  const lista = abaNinar === 'cantigas'
+    ? (() => { const it = c => `<button class="item${st.cantiga === c.id ? ' playing' : ''}" onclick="togCantiga('${c.id}')"><div class="ic">${c.emoji}</div><div class="bd"><b>${esc(c.nome)}</b><small>${esc(c.orig)}</small></div><span class="go">${st.cantiga === c.id ? '❚❚' : '▶'}</span></button>`; const cl = CANTIGAS.filter(c => !c.seed), og = CANTIGAS.filter(c => c.seed);
+        return `<div class="sec" style="margin-top:4px"><h3>Clássicas do mundo</h3><span class="tiny">${cl.length} cantigas</span></div>${cl.map(it).join('')}<div class="sec"><h3>Originais do app</h3><span class="tiny">${og.length} melodias</span></div>${og.map(it).join('')}`; })()
+    : SONS.map(s => `<button class="item${st.som === s.id ? ' playing' : ''}" onclick="togSom('${s.id}')"><div class="ic">${s.emoji}</div><div class="bd"><b>${esc(s.nome)}</b><small>${esc(s.desc)}</small></div><span class="go">${st.som === s.id ? '❚❚' : '▶'}</span></button>`).join('');
+  return `<h1 style="margin:6px 0 4px">Ninar</h1><p class="muted small">${CANTIGAS.length} cantigas em caixinha de música e ${SONS.length} sons contínuos. Dá para tocar os dois juntos e funcionam sem internet.</p>
+  <div class="seg"><button class="${abaNinar === 'cantigas' ? 'on' : ''}" onclick="abaNinar='cantigas';render()">🎶 Cantigas</button><button class="${abaNinar === 'sons' ? 'on' : ''}" onclick="abaNinar='sons';render()">🌊 Sons</button></div>
+  ${lista}
+  <div class="card" style="margin-top:6px">
+    <h4>Volume</h4>
+    <div class="vol"><span>🎶 Cantiga</span><input type="range" min="0" max="1" step=".05" value="${st.musicVol}" oninput="Audio2.setVol('music',+this.value)" aria-label="Volume da cantiga"></div>
+    <div class="vol"><span>🌊 Som</span><input type="range" min="0" max="1" step=".05" value="${st.soundVol}" oninput="Audio2.setVol('sound',+this.value)" aria-label="Volume do som"></div>
+    <h4 style="margin-top:10px">Desligar sozinho</h4>
+    <div class="chips" style="margin-top:6px">${[[0, 'Sem timer'], [15, '15 min'], [30, '30 min'], [45, '45 min'], [60, '1 hora']].map(([m, l]) => `<button class="chip${(st.timerTotal / 60000 === m) || (!m && !st.timerEnd) ? ' on' : ''}" onclick="Audio2.setTimer(${m});render()">${l}</button>`).join('')}</div>
+    ${st.timerEnd ? `<div class="tiny">Desliga em cerca de ${left} min, diminuindo o volume aos poucos.</div>` : ''}
+  </div>
+  <div class="note">💡 Deixe o celular a pelo menos 2 metros do berço e o volume baixo, como um chuveiro ligado no outro cômodo.</div>
+  <p class="footer-note">As cantigas são melodias de domínio público e melodias originais do app, tocadas pelo próprio celular.</p>`;
+};
+function togCantiga(id) { Audio2.st.cantiga === id ? Audio2.stopCantiga() : Audio2.playCantiga(id); render(); }
+function togSom(id) { Audio2.st.som === id ? Audio2.stopSom() : Audio2.playSom(id); render(); }
+
+/* mini player */
+function updMini() {
+  const st = Audio2.st, el = $('#mini'), on = st.cantiga || st.som;
+  el.classList.toggle('show', !!on);
+  if (!on) return;
+  const nm = [st.cantiga && CANTIGAS.find(c => c.id === st.cantiga).nome, st.som && SONS.find(s => s.id === st.som).nome].filter(Boolean).join(' + ');
+  const left = st.timerEnd ? ' · desliga em ' + Math.max(1, Math.ceil((st.timerEnd - Date.now()) / 60000)) + ' min' : '';
+  $('#minitxt').innerHTML = `<b>${esc(nm)}</b><small>Tocando${left}</small>`;
+}
+Audio2.st.onchange = () => { updMini(); };
+
+/* ---------- ROTINA ---------- */
+let faixaSel = null;
+routes.rotina = () => {
+  const fid = faixaSel || faixaId(), fx = IDADES.find(i => i.id === fid);
+  return `<h1 style="margin:6px 0 4px">Rotina</h1><p class="muted small">Horários de exemplo por idade, sinais de sono e o ritual da noite.</p>
+  <div class="chips">${IDADES.map(i => `<button class="chip${i.id === fid ? ' on' : ''}" onclick="faixaSel='${i.id}';render()">${i.nome}</button>`).join('')}</div>
+  <div class="card">
+    <h3>${fx.nome}${fid === faixaId() && idadeMeses() != null ? ' <span class="tag m">idade d' + (S.perfil.nome ? 'e ' + esc(S.perfil.nome) : 'o bebê') + '</span>' : ''}</h3>
+    <div class="kv"><div><b>${fx.total.replace(' por dia', '')}</b><small>sono por dia</small></div><div><b>${fx.sonecas}</b><small>sonecas</small></div><div><b>${fx.janela.split(' acordado')[0]}</b><small>tempo acordado</small></div></div>
+    <table class="t">${fx.dia.map(([h, t]) => `<tr><td>${h}</td><td>${esc(t)}</td></tr>`).join('')}</table>
+    <p class="tiny" style="margin-top:10px">É um modelo, não uma regra: cada bebê tem seu ritmo. O que mais ajuda é manter o horário de acordar e o ritual da noite parecidos todos os dias.</p>
+  </div>
+  <a class="item" href="#ritual"><div class="ic">✅</div><div class="bd"><b>Ritual da noite (checklist)</b><small>8 passos, do jantar ao berço</small></div><span class="go">›</span></a>
+  <a class="item" href="#tecnicas"><div class="ic">🌍</div><div class="bd"><b>20 técnicas de sono do mundo</b><small>Holanda, França, Japão, Austrália e mais</small></div><span class="go">›</span></a>
+  <a class="item" href="#jantar"><div class="ic">🥣</div><div class="bd"><b>Jantarzinhos que acalmam</b><small>6 receitas leves, sem açúcar</small></div><span class="go">›</span></a>
+  <div class="card"><h3 style="margin-bottom:6px">Sinais de sono</h3><p class="small muted">Comece o ritual nos primeiros sinais. Bebê cansado demais tem mais dificuldade para dormir.</p>
+  <ul class="bul small">${SINAIS.map(s => `<li>${esc(s)}</li>`).join('')}</ul></div>`;
+};
+
+routes.ritual = () => {
+  const k = hoje(), feitos = S.ritual[k] || [], pct = Math.round(feitos.length / RITUAL.length * 100);
+  return `<button class="back" onclick="history.back()">‹ Voltar</button><h1>Ritual da noite</h1>
+  <p class="muted small">Mesma ordem, todas as noites. Em 2 a 3 semanas o corpo d${S.perfil.nome ? 'e ' + esc(S.perfil.nome) : 'o bebê'} aprende que é hora de dormir.</p>
+  <div class="prog" style="margin:12px 0 4px"><i style="width:${pct}%"></i></div><div class="tiny" style="margin-bottom:12px">${feitos.length} de ${RITUAL.length} passos hoje</div>
+  <div class="card">${RITUAL.map((r, i) => `<div class="check${feitos.includes(i) ? ' ok' : ''}"><button class="bx" onclick="togRitual(${i})" aria-label="Marcar">${feitos.includes(i) ? '✓' : ''}</button>
+    <div style="flex:1" onclick="togRitual(${i})"><div class="row"><span class="e">${r.e}</span><b>${esc(r.t)}</b></div><div class="small muted">${esc(r.d)}</div>
+    ${r.rotina ? `<button class="btn sm" style="margin-top:8px" onclick="event.stopPropagation();startRotina('${r.rotina}')">▶ Abrir massagem guiada</button>` : ''}
+    ${r.som ? `<button class="btn sm ghost" style="margin-top:8px" onclick="event.stopPropagation();Audio2.playCantiga('${r.som}');toast('Tocando cantiga')">▶ Tocar cantiga</button>` : ''}</div></div>`).join('')}</div>
+  ${pct === 100 ? `<div class="card glow" style="text-align:center"><div style="font-size:40px">🌙</div><h3>Ritual completo!</h3><p class="small muted">Quer registrar no diário a hora que ${esc(nomeBebe())} dormiu?</p><button class="btn" onclick="iniciarSono('noite');go('diario')">Dormiu agora</button></div>` : ''}
+  <button class="muted small" style="display:block;margin:8px auto" onclick="S.ritual['${k}']=[];save('ritual');render()">Recomeçar o checklist de hoje</button>`;
+};
+function togRitual(i) { const k = hoje(), a = S.ritual[k] || []; const j = a.indexOf(i); j < 0 ? a.push(i) : a.splice(j, 1); S.ritual[k] = a; save('ritual'); render(); }
+
+/* ---------- TÉCNICAS ---------- */
+let catT = 'Todas';
+routes.tecnicas = () => {
+  const cats = ['Todas', ...new Set(TECNICAS.map(t => t.cat))];
+  const lista = catT === 'Todas' ? TECNICAS : TECNICAS.filter(t => t.cat === catT);
+  return `<button class="back" onclick="history.back()">‹ Voltar</button><h1>20 técnicas de sono do mundo</h1>
+  <p class="muted small">Como famílias e especialistas de vários países ajudam os bebês a dormir. Escolha 1 ou 2 e mantenha por algumas semanas.</p>
+  <div class="chips">${cats.map(c => `<button class="chip${catT === c ? ' on' : ''}" onclick="catT='${c}';render()">${c}</button>`).join('')}</div>
+  ${lista.map((t, i) => `<a class="item" href="#tecnica/${t.id}"><div class="ic">${t.flag}</div><div class="bd"><b>${TECNICAS.indexOf(t) + 1}. ${esc(t.nome)}</b><small>${esc(t.pais)} · ${esc(t.idade)}</small></div><span class="go">›</span></a>`).join('')}
+  <p class="footer-note">Nenhuma técnica do app envolve deixar o bebê chorando sozinho.</p>`;
+};
+routes.tecnica = id => {
+  const t = TECNICAS.find(x => x.id === id); if (!t) return routes.tecnicas();
+  const i = TECNICAS.indexOf(t), prox = TECNICAS[(i + 1) % TECNICAS.length];
+  return `<button class="back" onclick="history.back()">‹ Voltar</button>
+  <div class="tiny">${t.flag} ${esc(t.pais)} · técnica ${i + 1} de 20</div><h1>${esc(t.nome)}</h1>
+  <div style="margin:8px 0 14px"><span class="tag m">${esc(t.idade)}</span><span class="tag">${esc(t.cat)}</span></div>
+  <div class="card"><h4 style="margin-bottom:6px">O que é</h4><p class="small">${esc(t.oque)}</p></div>
+  <div class="card"><h4 style="margin-bottom:6px">Como fazer</h4><ol class="steps">${t.passos.map(p => `<li class="small">${esc(p)}</li>`).join('')}</ol></div>
+  <div class="warn">⚠️ ${esc(t.cuidado)}</div>
+  ${t.som ? `<button class="btn block" style="margin-top:14px" onclick="playAny('${t.som}')">▶ Tocar o som no app</button>` : ''}
+  ${t.massagem ? `<button class="btn block" style="margin-top:14px" onclick="go('massagem/${t.massagem}')">👐 Abrir a massagem guiada</button>` : ''}
+  <a class="item" style="margin-top:14px" href="#tecnica/${prox.id}"><div class="ic">${prox.flag}</div><div class="bd"><small>Próxima técnica</small><b>${esc(prox.nome)}</b></div><span class="go">›</span></a>`;
+};
+function playAny(id) { if (CANTIGAS.find(c => c.id === id)) Audio2.playCantiga(id); else Audio2.playSom(id); toast('Tocando'); }
+
+/* ---------- DIÁRIO ---------- */
+function iniciarSono(tipo) { S.dormindo = { tipo, ini: Date.now(), acordou: [] }; save('dormindo'); toast(tipo === 'noite' ? 'Boa noite! 🌙 Registrando o sono' : 'Soneca registrada 😴'); }
+function acordouAgora() { if (!S.dormindo) return; S.diario.push({ id: Date.now(), ...S.dormindo, fim: Date.now() }); S.dormindo = null; save('dormindo'); save('diario'); toast('Registrado no diário'); render(); }
+function despertar() { if (!S.dormindo) return; S.dormindo.acordou.push(Date.now()); save('dormindo'); toast('Despertar anotado. Volte a dormir, mamãe 💛'); render(); }
+function delEntry(id) { if (!confirmar()) return; S.diario = S.diario.filter(e => e.id !== id); save('diario'); render(); }
+function confirmar() { return true; }
+let diarioIv = null;
+routes.diario = () => {
+  const d = S.dormindo;
+  const ent = [...S.diario].sort((a, b) => b.ini - a.ini);
+  // últimos 7 dias
+  const dias = []; for (let i = 6; i >= 0; i--) { const dt = new Date(); dt.setHours(0, 0, 0, 0); dt.setDate(dt.getDate() - i); dias.push(dt); }
+  const tot = dias.map(dt => { const k = hoje(dt); let sn = 0, nt = 0, ac = 0; S.diario.forEach(e => { if (hoje(new Date(e.ini)) === k) { const ms = e.fim - e.ini; e.tipo === 'noite' ? (nt += ms, ac += (e.acordou || []).length) : sn += ms; } }); return { k, dt, sn: sn / 36e5, nt: nt / 36e5, ac }; });
+  const mx = Math.max(14, ...tot.map(t => t.sn + t.nt)), W = 320, H = 150, bw = 28, gap = (W - 20 - bw * 7) / 6;
+  const bars = tot.map((t, i) => { const x = 20 + i * (bw + gap), hn = t.nt / mx * (H - 30), hs = t.sn / mx * (H - 30), y0 = H - 18;
+    return `<rect x="${x}" y="${y0 - hn}" width="${bw}" height="${hn}" rx="4" fill="#8ab4ff"/><rect x="${x}" y="${y0 - hn - hs - (hs ? 2 : 0)}" width="${bw}" height="${hs}" rx="4" fill="#ffd36b"/>
+    ${t.sn + t.nt ? `<text x="${x + bw / 2}" y="${y0 - hn - hs - 6}" text-anchor="middle" font-size="9" fill="var(--tx2)">${(t.sn + t.nt).toFixed(1)}h</text>` : ''}
+    <text x="${x + bw / 2}" y="${H - 4}" text-anchor="middle" font-size="10" fill="var(--tx3)">${['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'][t.dt.getDay()]}</text>`; }).join('');
+  const comDados = tot.filter(t => t.sn + t.nt > 0);
+  const media = comDados.length ? (comDados.reduce((a, t) => a + t.sn + t.nt, 0) / comDados.length) : 0;
+  const mediaAc = comDados.length ? (comDados.reduce((a, t) => a + t.ac, 0) / comDados.length) : 0;
+  return `<h1 style="margin:6px 0 4px">Diário do sono</h1><p class="muted small">Anote sonecas e noites com um toque. Em poucos dias você enxerga o padrão d${S.perfil.nome ? 'e ' + esc(S.perfil.nome) : 'o bebê'}.</p>
+  ${d ? `<div class="running"><div class="small">${d.tipo === 'noite' ? '🌙 Sono da noite' : '😴 Soneca'} desde ${hhmm(d.ini)}</div><div class="clock" id="dclock">${mmss((Date.now() - d.ini) / 1000)}</div>
+     ${d.tipo === 'noite' ? `<div class="small muted">${d.acordou.length} despertar${d.acordou.length === 1 ? '' : 'es'} na madrugada</div>` : ''}
+     <div class="row" style="justify-content:center;margin-top:12px;gap:8px"><button class="btn" onclick="acordouAgora()">☀️ Acordou</button>${d.tipo === 'noite' ? `<button class="btn ghost" onclick="despertar()">+ Despertou e voltou</button>` : ''}</div>
+     <button class="tiny" style="margin-top:10px" onclick="S.dormindo=null;save('dormindo');render()">Cancelar registro</button></div>`
+  : `<div class="bigbtns"><button class="bigbtn" onclick="iniciarSono('soneca');render()"><span class="e">😴</span>Começou a soneca</button><button class="bigbtn" onclick="iniciarSono('noite');render()"><span class="e">🌙</span>Dormiu para a noite</button></div>`}
+  <button class="btn ghost block" style="margin:12px 0" onclick="go('novo')">✏️ Anotar um sono que já passou</button>
+  <div class="card chart"><div class="row between"><h4>Últimos 7 dias</h4><span class="tiny">${comDados.length ? 'média ' + media.toFixed(1) + 'h/dia' : ''}</span></div>
+    <svg viewBox="0 0 ${W} ${H}">${bars}</svg>
+    <div class="legend"><span><i style="background:#8ab4ff"></i>Noite</span><span><i style="background:#ffd36b"></i>Sonecas</span>${comDados.length ? `<span>${mediaAc.toFixed(1)} despertares/noite</span>` : ''}</div>
+    ${!comDados.length ? '<p class="tiny" style="margin-top:8px">O gráfico aparece assim que você registrar o primeiro sono.</p>' : `<p class="tiny" style="margin-top:8px">Referência para ${IDADES.find(i => i.id === faixaId()).nome}: ${IDADES.find(i => i.id === faixaId()).total}.</p>`}
+  </div>
+  <div class="card"><h4 style="margin-bottom:4px">Registros</h4>
+  ${ent.length ? ent.slice(0, 30).map(e => `<div class="entry"><span class="e">${e.tipo === 'noite' ? '🌙' : '😴'}</span><div class="bd"><b>${e.tipo === 'noite' ? 'Noite' : 'Soneca'} · ${dur(e.fim - e.ini)}</b><small class="muted">${new Date(e.ini).toLocaleDateString('pt-BR', { weekday: 'short', day: '2-digit', month: '2-digit' })} · ${hhmm(e.ini)} às ${hhmm(e.fim)}${(e.acordou || []).length ? ' · ' + e.acordou.length + ' despertar(es)' : ''}${e.nota ? ' · ' + esc(e.nota) : ''}</small></div><button class="del" onclick="delEntry(${e.id})" aria-label="Apagar">🗑</button></div>`).join('') : '<p class="small muted">Nenhum registro ainda.</p>'}</div>`;
+};
+routes.diario.after = () => { clearInterval(diarioIv); if (S.dormindo) diarioIv = setInterval(() => { const c = $('#dclock'); if (!c || !S.dormindo) return clearInterval(diarioIv); c.textContent = mmss((Date.now() - S.dormindo.ini) / 1000); }, 1000); };
+
+routes.novo = () => {
+  const n = new Date(); const ds = hoje(n);
+  return `<button class="back" onclick="history.back()">‹ Voltar</button><h1>Anotar sono</h1>
+  <div class="card"><label class="f">Tipo</label><div class="seg" style="margin:0"><button id="tS" class="on" onclick="this.classList.add('on');$('#tN').classList.remove('on')">😴 Soneca</button><button id="tN" onclick="this.classList.add('on');$('#tS').classList.remove('on')">🌙 Noite</button></div>
+  <label class="f" for="nd">Dia em que começou</label><input id="nd" type="date" value="${ds}" max="${ds}">
+  <div class="grid2"><div><label class="f" for="ni">Dormiu</label><input id="ni" type="time" value="13:00"></div><div><label class="f" for="nf">Acordou</label><input id="nf" type="time" value="14:30"></div></div>
+  <label class="f" for="na">Despertares na madrugada</label><input id="na" type="number" min="0" max="20" value="0">
+  <label class="f" for="nn">Observação (opcional)</label><input id="nn" maxlength="80" placeholder="Ex.: dente nascendo, dormiu no carro">
+  <button class="btn block" style="margin-top:16px" onclick="salvarNovo()">Salvar</button></div>`;
+};
+function salvarNovo() {
+  const d = $('#nd').value, i = $('#ni').value, f = $('#nf').value; if (!d || !i || !f) return toast('Preencha dia e horários');
+  const ini = new Date(d + 'T' + i).getTime(); let fim = new Date(d + 'T' + f).getTime(); if (fim <= ini) fim += 864e5;
+  const n = +$('#na').value || 0;
+  S.diario.push({ id: Date.now(), tipo: $('#tN').classList.contains('on') ? 'noite' : 'soneca', ini, fim, acordou: Array(n).fill(ini), nota: $('#nn').value.trim() });
+  save('diario'); toast('Sono anotado'); history.back();
+}
+
+/* ---------- MAIS ---------- */
+routes.mais = () => `<h1 style="margin:6px 0 14px">Mais</h1>
+  <a class="item" href="#album"><div class="ic">📸</div><div class="bd"><b>Álbum de evolução</b><small>Foto da semana, antes e depois, filminho</small></div><span class="go">›</span></a>
+  <a class="item" href="#jantar"><div class="ic">🥣</div><div class="bd"><b>Jantarzinhos que acalmam</b><small>Receitas leves da Chef Nanna, sem açúcar</small></div><span class="go">›</span></a>
+  <a class="item" href="#tecnicas"><div class="ic">🌍</div><div class="bd"><b>20 técnicas do mundo</b><small>Para ajudar no sono sem deixar chorar</small></div><span class="go">›</span></a>
+  <a class="item" href="#seguranca"><div class="ic">🛡️</div><div class="bd"><b>Sono seguro e cuidados</b><small>Recomendações da Sociedade Brasileira de Pediatria</small></div><span class="go">›</span></a>
+  <a class="item" href="#luz"><div class="ic">🕯️</div><div class="bd"><b>Luz noturna</b><small>Luz quente e fraca para as mamadas</small></div><span class="go">›</span></a>
+  <a class="item" href="#ajustes"><div class="ic">⚙️</div><div class="bd"><b>Ajustes</b><small>Dados do bebê, tema, voz guia, instalar</small></div><span class="go">›</span></a>
+  <a class="item" href="#sobre"><div class="ic">💛</div><div class="bd"><b>Sobre o app</b><small>Fontes e aviso importante</small></div><span class="go">›</span></a>`;
+
+routes.jantar = () => `<button class="back" onclick="history.back()">‹ Voltar</button><h1>Jantarzinhos que acalmam</h1>
+  <p class="muted small">Jantar leve, morno e no mesmo horário faz parte do ritual. Receitas sem açúcar, no estilo Chef Nanna.</p>
+  <div class="note" style="margin-bottom:14px"><ul class="bul" style="margin:0">${JANTAR_DICAS.map(d => `<li>${esc(d)}</li>`).join('')}</ul></div>
+  ${JANTARES.map((j, i) => `<details class="card"><summary class="row" style="list-style:none;cursor:pointer"><span style="font-size:30px">${j.e}</span><div style="flex:1"><b>${esc(j.nome)}</b><div class="tiny">${esc(j.idade)}</div></div><span class="go">▾</span></summary>
+   <h4 style="margin:12px 0 4px">Ingredientes</h4><ul class="bul small">${j.ing.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+   <h4 style="margin:10px 0 4px">Modo de preparo</h4><ol class="steps">${j.modo.map(x => `<li class="small">${esc(x)}</li>`).join('')}</ol></details>`).join('')}
+  <p class="footer-note">Ofereça alimentos novos um de cada vez e siga a orientação do pediatra sobre alergias e texturas.</p>`;
+
+routes.seguranca = () => `<button class="back" onclick="history.back()">‹ Voltar</button><h1>Sono seguro e cuidados</h1>
+  <div class="card"><h3 style="margin-bottom:6px">🛏️ Sono seguro</h3><p class="tiny">Recomendações da Sociedade Brasileira de Pediatria e da Academia Americana de Pediatria.</p><ul class="bul small">${SEGURANCA_SONO.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+  <div class="card"><h3 style="margin-bottom:6px">👐 Antes de massagear</h3><ul class="bul small">${SEGURANCA_MASSAGEM.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+  <div class="warn">🚨 ${esc(AVISO)}</div>`;
+
+routes.sobre = () => `<button class="back" onclick="history.back()">‹ Voltar</button><h1>Sobre o Noite Tranquila</h1>
+  <div class="card small"><p>Um app da <b>Chef Nanna</b> para completar as +365 Receitas: comida boa de dia, noite tranquila à noite.</p>
+  <p>As massagens e técnicas foram reunidas a partir de tradições de vários países e de referências como: Sociedade Brasileira de Pediatria (sono seguro), Academia Americana de Pediatria, International Association of Infant Massage (método de Vimala McClure), Touch Research Institute da Universidade de Miami (Tiffany Field), estudo sobre técnicas comportamentais de sono publicado na revista Pediatrics (2016), serviços de saúde da Austrália (Raising Children Network e Tresillian) e o Método Canguru.</p>
+  <p>Os sons e as cantigas são gerados pelo próprio celular: funcionam sem internet. Seus dados ficam guardados só neste aparelho.</p></div>
+  <div class="warn">${esc(AVISO)}</div>`;
+
+routes.ajustes = () => `<button class="back" onclick="history.back()">‹ Voltar</button><h1>Ajustes</h1>
+  <div class="card"><label class="f" for="anome" style="margin-top:0">Nome do bebê</label><input id="anome" value="${esc(S.perfil.nome || '')}" maxlength="24">
+  <label class="f" for="anasc">Mês e ano de nascimento</label><input id="anasc" type="month" value="${esc(S.perfil.nasc || '')}">
+  <button class="btn block" style="margin-top:14px" onclick="S.perfil={nome:$('#anome').value.trim(),nasc:$('#anasc').value};save('perfil');toast('Salvo')">Salvar</button></div>
+  <div class="card">
+   <div class="setrow" style="display:block"><div class="bd"><b>Cores do app</b><small>Automático: escuro das 18h às 7h, claro com as cores da Chef Nanna durante o dia</small></div>
+   <div class="seg" style="margin:10px 0 0">${[['auto', '🌗 Automático'], ['dark', '🌙 Escuro'], ['light', '☀️ Claro']].map(([k, l]) => `<button class="${S.prefs.tema === k ? 'on' : ''}" onclick="S.prefs.tema='${k}';save('prefs');applyTheme();render()">${l}</button>`).join('')}</div></div>
+   <div class="setrow"><div class="bd"><b>Voz guia nas massagens</b><small>O celular lê cada passo em voz alta</small></div><button class="switch${S.prefs.voz ? ' on' : ''}" onclick="S.prefs.voz=!S.prefs.voz;save('prefs');render()" aria-label="Voz guia"></button></div>
+   <div class="setrow"><div class="bd"><b>Cantiga durante a massagem</b><small>Toca baixinho ao abrir o modo guiado</small></div><button class="switch${S.prefs.musica ? ' on' : ''}" onclick="S.prefs.musica=!S.prefs.musica;save('prefs');render()" aria-label="Cantiga na massagem"></button></div>
+   <div class="setrow"><div class="bd"><b>Cantiga da massagem</b></div><select style="width:auto;max-width:55%" onchange="S.prefs.cantigaMassagem=this.value;save('prefs')">${CANTIGAS.map(c => `<option value="${c.id}"${S.prefs.cantigaMassagem === c.id ? ' selected' : ''}>${esc(c.nome)}</option>`).join('')}</select></div>
+  </div>
+  <div class="card"><h4>Instalar no celular</h4>
+   ${deferredPrompt ? `<button class="btn block" style="margin-top:10px" onclick="instalar()">📲 Instalar o app</button>` : `<p class="small muted" style="margin-top:6px"><b>iPhone:</b> no Safari, toque em Compartilhar e depois em "Adicionar à Tela de Início".<br><b>Android:</b> no Chrome, toque nos 3 pontinhos e em "Instalar app" ou "Adicionar à tela inicial".</p>`}</div>
+  <button class="btn ghost block" onclick="if(confirmReset())resetAll()">Apagar todos os dados do app</button>`;
+let resetArm = 0;
+function confirmReset() { if (Date.now() - resetArm < 4000) return true; resetArm = Date.now(); toast('Toque de novo para confirmar'); return false; }
+function resetAll() { try { Object.keys(localStorage).filter(k => k.startsWith('nt_')).forEach(k => localStorage.removeItem(k)); } catch (e) {} location.hash = ''; location.reload(); }
+
+/* ---------- LUZ NOTURNA ---------- */
+routes.luz = () => { setTimeout(openLuz, 0); return routes.inicio(); };
+function openLuz() {
+  if ($('.nightlight')) return;
+  const el = document.createElement('div'); el.className = 'nightlight';
+  el.innerHTML = `<div class="glow" id="lglow"></div><div class="ctl"><input type="range" min=".15" max="1" step=".05" value=".6" oninput="$('#lglow').style.opacity=this.value" aria-label="Brilho"><div style="margin-top:6px">Toque duas vezes na luz para sair</div></div>`;
+  document.body.appendChild(el); el.querySelector('.glow').style.opacity = .6;
+  el.querySelector('.glow').addEventListener('dblclick', closeLuz);
+  let lt = 0; el.querySelector('.glow').addEventListener('touchend', e => { const n = Date.now(); if (n - lt < 350) { e.preventDefault(); closeLuz(); } lt = n; });
+  wakeOn();
+  history.replaceState(null, '', '#inicio');
+}
+function closeLuz() { const el = $('.nightlight'); if (el) el.remove(); wakeOff(); }
+
+/* ---------- tema, instalação, SW ---------- */
+function temaAtual() { if (S.prefs.tema === 'dark' || S.prefs.tema === 'light') return S.prefs.tema; const h = new Date().getHours(); return (h >= 18 || h < 7) ? 'dark' : 'light'; }
+function applyTheme() { const t = temaAtual(); if (document.documentElement.dataset.theme === t) return; document.documentElement.dataset.theme = t; const m = document.querySelector('meta[name=theme-color]'); if (m) m.content = t === 'dark' ? '#121a31' : '#fbf7f0'; }
+setInterval(applyTheme, 60000);
+let deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; });
+function instalar() { if (!deferredPrompt) return; deferredPrompt.prompt(); deferredPrompt = null; }
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && ($('#player') || $('.nightlight'))) wakeOn(); });
+if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
+
+
+
+/* ================= ÁLBUM DE EVOLUÇÃO (fotos semanais) =================
+   As fotos ficam no IndexedDB do próprio celular (não vão para nenhum servidor). */
+const FotoDB = (() => {
+  let dbp = null;
+  const open = () => dbp || (dbp = new Promise((res, rej) => {
+    try { const r = indexedDB.open('noite_tranquila', 1);
+      r.onupgradeneeded = () => r.result.createObjectStore('fotos', { keyPath: 'id' });
+      r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); } catch (e) { rej(e); }
+  }));
+  const tx = async (mode, fn) => { const db = await open(); return new Promise((res, rej) => { const t = db.transaction('fotos', mode), s = t.objectStore('fotos'); const out = fn(s); t.oncomplete = () => res(out && out.result !== undefined ? out.result : out); t.onerror = () => rej(t.error); }); };
+  return {
+    add: rec => tx('readwrite', s => s.put(rec)),
+    del: id => tx('readwrite', s => s.delete(id)),
+    all: async () => { try { const r = await tx('readonly', s => s.getAll()); return (r || []).sort((a, b) => a.ts - b.ts); } catch (e) { return []; } }
+  };
+})();
+
+const MARCOS = ['', 'Primeiro sorriso', 'Sustentou a cabeça', 'Rolou sozinho', 'Sentou sem apoio', 'Primeira papinha', 'Primeiro dentinho', 'Engatinhou', 'Ficou em pé', 'Primeiros passos', 'Primeira palavra', 'Dormiu a noite toda', 'Mesversário', 'Outro momento especial'];
+let fotoURLs = [];
+const limparURLs = () => { fotoURLs.forEach(u => URL.revokeObjectURL(u)); fotoURLs = []; };
+const urlDe = f => { const u = URL.createObjectURL(f.blob); fotoURLs.push(u); return u; };
+
+function nascDate() { if (!S.perfil || !S.perfil.nasc) return null; const p = S.perfil.nasc.split('-').map(Number); return new Date(p[0], p[1] - 1, p[2] || 1); }
+function idadeNaFoto(ts) {
+  const n = nascDate(); if (!n) return { curto: new Date(ts).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' }), sem: null };
+  const dias = Math.max(0, Math.floor((ts - n) / 864e5)), sem = Math.floor(dias / 7) + 1;
+  const d = new Date(ts); let m = (d.getFullYear() - n.getFullYear()) * 12 + d.getMonth() - n.getMonth(); if (d.getDate() < n.getDate()) m--; m = Math.max(0, m);
+  const anv = new Date(n.getFullYear(), n.getMonth() + m, n.getDate()), ws = Math.max(0, Math.floor((ts - anv) / (7 * 864e5)));
+  let curto; if (m < 1) curto = 'Semana ' + sem; else if (m < 24) curto = m + (m === 1 ? ' mês' : ' meses') + (ws ? ' e ' + ws + ' sem' : ''); else { const a = Math.floor(m / 12), r = m % 12; curto = a + (a === 1 ? ' ano' : ' anos') + (r ? ' e ' + r + 'm' : ''); }
+  return { curto, sem };
+}
+const dataBR = ts => new Date(ts).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+
+/* reduz a foto (mais leve e sem estourar a memória do celular) */
+async function reduzir(file, max = 1280) {
+  let src;
+  try { src = await createImageBitmap(file, { imageOrientation: 'from-image' }); }
+  catch (e) { src = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = URL.createObjectURL(file); }); }
+  const w = src.width, h = src.height, k = Math.min(1, max / Math.max(w, h));
+  const c = document.createElement('canvas'); c.width = Math.round(w * k); c.height = Math.round(h * k);
+  c.getContext('2d').drawImage(src, 0, 0, c.width, c.height);
+  return new Promise(res => c.toBlob(res, 'image/jpeg', .86));
+}
+
+/* sono médio na semana da foto (liga o álbum ao diário) */
+function sonoSemana(ts) {
+  const ini = ts - 7 * 864e5, es = S.diario.filter(e => e.ini >= ini && e.ini <= ts + 864e5);
+  if (!es.length) return null;
+  const dias = new Set(es.map(e => hoje(new Date(e.ini)))).size;
+  const noites = es.filter(e => e.tipo === 'noite');
+  return { h: es.reduce((a, e) => a + (e.fim - e.ini), 0) / 36e5 / dias, desp: noites.length ? noites.reduce((a, e) => a + (e.acordou || []).length, 0) / noites.length : null };
+}
+
+/* ---------- tela do álbum ---------- */
+routes.album = () => `<div id="albumView"><h1 style="margin:6px 0 4px">Álbum</h1><p class="muted small">Carregando fotos...</p></div>`;
+routes.album.after = async () => {
+  limparURLs();
+  const fotos = await FotoDB.all(), el = $('#albumView'); if (!el) return;
+  const ult = fotos[fotos.length - 1], semFoto = !ult || Date.now() - ult.ts > 6.5 * 864e5;
+  const nm = S.perfil.nome ? esc(S.perfil.nome) : 'seu bebê';
+  el.innerHTML = `<h1 style="margin:6px 0 4px">Álbum de ${nm}</h1>
+  <p class="muted small">Uma foto por semana e o app monta a evolução d${S.perfil.nome ? 'e ' + nm : 'o seu bebê'}: idade em cada foto, antes e depois e um filminho.</p>
+  <div class="card glow" style="text-align:center">
+    <div style="font-size:34px">📸</div>
+    <h3>${semFoto ? 'Hora da foto da semana!' : 'Foto da semana já registrada 💛'}</h3>
+    <p class="small muted" style="margin:4px 0 12px">${semFoto ? 'Dica: tire sempre no mesmo lugar (no berço ou no mesmo paninho) para a evolução ficar linda.' : 'A próxima foto da semana é daqui a ' + Math.max(1, Math.ceil((ult.ts + 7 * 864e5 - Date.now()) / 864e5)) + ' dia(s). Momento especial? Pode adicionar agora mesmo.'}</p>
+    <label class="btn${semFoto ? '' : ' ghost'}" style="cursor:pointer">📷 ${semFoto ? 'Tirar ou escolher foto' : 'Adicionar outra foto'}<input type="file" accept="image/*" id="fotoIn" hidden></label>
+  </div>
+  ${fotos.length >= 2 ? `<div class="grid2" style="margin-bottom:14px">
+    <button class="qa" onclick="go('evolucao')"><span class="e">🎞️</span><b>Ver a evolução</b><small>Filminho com todas as fotos</small></button>
+    <button class="qa" onclick="go('antesdepois')"><span class="e">↔️</span><b>Antes e depois</b><small>Primeira foto x mais recente</small></button>
+    <button class="qa" onclick="gerarMontagem()" style="grid-column:1/-1;min-height:auto;flex-direction:row;align-items:center"><span class="e">🖼️</span><div><b>Criar montagem para compartilhar</b><br><small>Uma imagem com a evolução, pronta para o WhatsApp e o Instagram</small></div></button>
+  </div>` : ''}
+  ${fotos.length ? `<div class="sec" style="margin-top:4px"><h3>${fotos.length} foto${fotos.length > 1 ? 's' : ''}</h3><span class="tiny">desde ${dataBR(fotos[0].ts)}</span></div>
+  <div class="fgrid">${[...fotos].reverse().map(f => { const a = idadeNaFoto(f.ts); return `<a class="fcard" href="#foto/${f.id}"><img src="${urlDe(f)}" alt="Foto de ${a.curto}" loading="lazy"><div class="flab"><b>${esc(a.curto)}</b><small>${dataBR(f.ts)}</small></div>${f.marco ? `<span class="fmarco">⭐ ${esc(f.marco)}</span>` : ''}</a>`; }).join('')}</div>`
+  : `<div class="card small muted" style="text-align:center">Nenhuma foto ainda. A primeira foto é o "antes" de tudo: tire hoje! 💛</div>`}
+  <p class="footer-note">🔒 As fotos ficam guardadas só neste celular, não vão para a internet. Para ter uma cópia, use "Baixar" em cada foto ou crie a montagem. Se apagar os dados do navegador ou trocar de celular, as fotos não vão junto.</p>`;
+  $('#fotoIn').onchange = async e => {
+    const f = e.target.files && e.target.files[0]; if (!f) return;
+    toast('Preparando a foto...');
+    try { novaFoto = await reduzir(f); go('novafoto'); } catch (err) { toast('Não consegui abrir essa foto. Tente outra.'); }
+  };
+};
+
+/* ---------- confirmar nova foto ---------- */
+let novaFoto = null;
+routes.novafoto = () => {
+  if (!novaFoto) { setTimeout(() => go('album')); return ''; }
+  limparURLs(); const u = URL.createObjectURL(novaFoto); fotoURLs.push(u);
+  const a = idadeNaFoto(Date.now());
+  return `<button class="back" onclick="novaFoto=null;go('album')">‹ Cancelar</button><h1>Nova foto</h1>
+  <div class="fprev"><img src="${u}" alt="Prévia"><span class="fbadge" id="fbadge">${esc(a.curto)}</span></div>
+  <div class="card"><label class="f" for="fdata" style="margin-top:0">Data da foto</label><input id="fdata" type="date" value="${hoje()}" max="${hoje()}" onchange="$('#fbadge').textContent=idadeNaFoto(new Date(this.value+'T12:00').getTime()).curto">
+  <label class="f" for="fmarco">É um momento especial? (opcional)</label><select id="fmarco">${MARCOS.map(m => `<option value="${esc(m)}">${m ? esc(m) : 'Não, só a foto da semana'}</option>`).join('')}</select>
+  <label class="f" for="fnota">Recadinho para o futuro (opcional)</label><textarea id="fnota" rows="2" maxlength="160" placeholder="Ex.: Essa semana comeu abóbora pela primeira vez e amou!"></textarea>
+  <button class="btn block" style="margin-top:14px" id="fsalvar">Salvar no álbum 💛</button></div>`;
+};
+routes.novafoto.after = () => {
+  const b = $('#fsalvar'); if (!b) return;
+  b.onclick = async () => {
+    b.disabled = true; b.textContent = 'Salvando...';
+    const d = $('#fdata').value, ts = d === hoje() ? Date.now() : new Date(d + 'T12:00').getTime();
+    try {
+      await FotoDB.add({ id: Date.now(), ts, blob: novaFoto, marco: $('#fmarco').value, nota: $('#fnota').value.trim() });
+      try { navigator.storage && navigator.storage.persist && navigator.storage.persist(); } catch (e) {}
+      novaFoto = null; toast('Foto salva no álbum 📸'); go('album');
+    } catch (e) { toast('Não deu para salvar. Verifique o espaço do celular.'); b.disabled = false; b.textContent = 'Salvar no álbum 💛'; }
+  };
+};
+
+/* ---------- foto aberta ---------- */
+routes.foto = () => `<div id="fotoView"></div>`;
+routes.foto.after = async id => {
+  limparURLs(); const fotos = await FotoDB.all(), i = fotos.findIndex(f => String(f.id) === String(id)), f = fotos[i], el = $('#fotoView'); if (!el) return;
+  if (!f) { go('album'); return; }
+  const a = idadeNaFoto(f.ts), sono = sonoSemana(f.ts), ant = fotos[i - 1], prox = fotos[i + 1], u = urlDe(f);
+  el.innerHTML = `<button class="back" onclick="go('album')">‹ Álbum</button>
+  <div class="fprev"><img src="${u}" alt="Foto de ${esc(a.curto)}"><span class="fbadge">${esc(a.curto)}</span></div>
+  <div class="row between"><div><h2>${esc(a.curto)}</h2><div class="tiny">${dataBR(f.ts)}${a.sem ? ' · semana ' + a.sem + ' de vida' : ''}</div></div>
+  <div class="row" style="gap:6px">${ant ? `<a class="iconbtn" href="#foto/${ant.id}" aria-label="Foto anterior" style="text-decoration:none">‹</a>` : ''}${prox ? `<a class="iconbtn" href="#foto/${prox.id}" aria-label="Próxima foto" style="text-decoration:none">›</a>` : ''}</div></div>
+  ${f.marco ? `<div style="margin:10px 0"><span class="tag y">⭐ ${esc(f.marco)}</span></div>` : ''}
+  ${f.nota ? `<div class="note" style="margin:10px 0">💬 ${esc(f.nota)}</div>` : ''}
+  ${sono ? `<div class="card" style="margin-top:12px"><h4>Sono nesta semana</h4><div class="kv" style="grid-template-columns:1fr 1fr"><div><b>${sono.h.toFixed(1)}h</b><small>por dia, em média</small></div><div><b>${sono.desp == null ? '—' : sono.desp.toFixed(1)}</b><small>despertares por noite</small></div></div></div>` : ''}
+  <div class="grid2" style="margin-top:12px"><button class="btn ghost" id="fbaixar">⬇️ Baixar</button><button class="btn ghost" id="fapagar">🗑 Apagar</button></div>`;
+  $('#fbaixar').onclick = () => baixarBlob(f.blob, `${(S.perfil.nome || 'bebe').replace(/\W+/g, '_')}_${a.curto.replace(/\W+/g, '_')}.jpg`);
+  let arm = 0; $('#fapagar').onclick = async () => { if (Date.now() - arm > 4000) { arm = Date.now(); toast('Toque de novo para apagar'); return; } await FotoDB.del(f.id); toast('Foto apagada'); go('album'); };
+};
+
+function baixarBlob(blob, nome) { const u = URL.createObjectURL(blob), a = document.createElement('a'); a.href = u; a.download = nome; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 4000); }
+
+/* ---------- antes e depois (com arrastar) ---------- */
+routes.antesdepois = () => `<div id="adView"></div>`;
+routes.antesdepois.after = async () => {
+  limparURLs(); const fotos = await FotoDB.all(), el = $('#adView'); if (!el) return;
+  if (fotos.length < 2) { go('album'); return; }
+  const opts = fotos.map((f, i) => `<option value="${i}">${esc(idadeNaFoto(f.ts).curto)} · ${dataBR(f.ts)}</option>`).join('');
+  el.innerHTML = `<button class="back" onclick="go('album')">‹ Álbum</button><h1>Antes e depois</h1><p class="muted small">Arraste para comparar.</p>
+  <div class="cmp" id="cmp"><img id="cB"><div class="cA" id="cAw"><img id="cA"></div><div class="cline" id="cline"><span>↔</span></div><span class="fbadge l" id="lA"></span><span class="fbadge" id="lB"></span></div>
+  <input type="range" min="0" max="100" value="50" id="cr" aria-label="Comparar" style="width:100%">
+  <div class="grid2"><div><label class="f">Antes</label><select id="sA">${opts}</select></div><div><label class="f">Depois</label><select id="sB">${opts}</select></div></div>`;
+  const sA = $('#sA'), sB = $('#sB'); sA.value = 0; sB.value = fotos.length - 1;
+  const set = () => { const A = fotos[sA.value], B = fotos[sB.value]; $('#cA').src = urlDe(A); $('#cB').src = urlDe(B); $('#lA').textContent = idadeNaFoto(A.ts).curto; $('#lB').textContent = idadeNaFoto(B.ts).curto; };
+  const pos = v => { $('#cAw').style.clipPath = `inset(0 ${100 - v}% 0 0)`; $('#cline').style.left = v + '%'; };
+  sA.onchange = sB.onchange = set; $('#cr').oninput = e => pos(e.target.value); set(); pos(50);
+  const cmp = $('#cmp'); const mv = x => { const r = cmp.getBoundingClientRect(), v = Math.max(0, Math.min(100, (x - r.left) / r.width * 100)); $('#cr').value = v; pos(v); };
+  cmp.addEventListener('pointerdown', e => { mv(e.clientX); cmp.setPointerCapture(e.pointerId); }); cmp.addEventListener('pointermove', e => { if (e.buttons) mv(e.clientX); });
+};
+
+/* ---------- filminho da evolução ---------- */
+let evoIv = null;
+routes.evolucao = () => `<div id="evoView"></div>`;
+routes.evolucao.after = async () => {
+  limparURLs(); const fotos = await FotoDB.all(); if (fotos.length < 2) { go('album'); return; }
+  const urls = fotos.map(urlDe);
+  const pl = document.createElement('div'); pl.className = 'player evo'; pl.id = 'evo';
+  pl.innerHTML = `<div class="ptop"><button class="iconbtn" id="evoX" aria-label="Fechar">✕</button><div class="pname">A evolução de ${esc(nomeBebe())}</div><button class="iconbtn" id="evoM" aria-label="Música">🎶</button></div>
+   <div class="pbar">${fotos.map(() => '<i><b></b></i>').join('')}</div>
+   <div class="evoStage"><img id="e0"><img id="e1"></div>
+   <div class="stitle" id="eLab"></div><div class="rep" id="eMar"></div><div class="time" id="eData"></div>
+   <div class="ctr"><button id="evoP" aria-label="Anterior">⏮</button><button class="pp" id="evoPP" aria-label="Pausar">❚❚</button><button id="evoN" aria-label="Próxima">⏭</button></div>`;
+  document.body.appendChild(pl); document.body.style.overflow = 'hidden';
+  let i = -1, playing = true, layer = 0;
+  const show = k => { i = (k + fotos.length) % fotos.length; layer ^= 1; const im = $('#e' + layer), ot = $('#e' + (layer ^ 1));
+    im.src = urls[i]; im.classList.add('on'); ot.classList.remove('on');
+    const a = idadeNaFoto(fotos[i].ts); $('#eLab').textContent = a.curto; $('#eMar').textContent = fotos[i].marco ? '⭐ ' + fotos[i].marco.toUpperCase() : ''; $('#eData').textContent = dataBR(fotos[i].ts);
+    pl.querySelectorAll('.pbar b').forEach((b, j) => b.style.width = j <= i ? '100%' : '0'); };
+  const loop = () => { clearInterval(evoIv); evoIv = setInterval(() => { if (playing) show(i + 1); }, 2200); };
+  show(0); loop();
+  if (!Audio2.st.cantiga) Audio2.playCantiga('brilha');
+  $('#evoX').onclick = () => { clearInterval(evoIv); pl.remove(); document.body.style.overflow = ''; go('album'); };
+  $('#evoM').onclick = () => { Audio2.st.cantiga ? Audio2.stopCantiga() : Audio2.playCantiga('brilha'); };
+  $('#evoPP').onclick = e => { playing = !playing; e.currentTarget.firstChild.textContent = playing ? '❚❚' : '▶'; };
+  $('#evoN').onclick = () => { show(i + 1); loop(); }; $('#evoP').onclick = () => { show(i - 1); loop(); };
+};
+
+/* ---------- montagem para compartilhar ---------- */
+async function gerarMontagem() {
+  const fotos = await FotoDB.all(); if (fotos.length < 2) return;
+  toast('Criando a montagem...');
+  const n = Math.min(9, fotos.length), sel = [];
+  for (let k = 0; k < n; k++) sel.push(fotos[Math.round(k * (fotos.length - 1) / (n - 1))]);
+  const cols = n <= 2 ? 2 : n <= 4 ? 2 : 3, rows = Math.ceil(n / cols);
+  const W = 1080, pad = 36, top = 190, bot = 110, cell = (W - pad * (cols + 1)) / cols, H = top + rows * cell + (rows - 1) * pad + bot + pad;
+  const c = document.createElement('canvas'); c.width = W; c.height = H; const g = c.getContext('2d');
+  const grd = g.createLinearGradient(0, 0, 0, H); grd.addColorStop(0, '#1d2a5c'); grd.addColorStop(1, '#121a31'); g.fillStyle = grd; g.fillRect(0, 0, W, H);
+  g.fillStyle = '#ffffff22'; for (let s = 0; s < 60; s++) { g.beginPath(); g.arc((s * 197) % W, (s * 113) % H, (s % 3) + 1, 0, 7); g.fill(); }
+  const F = 'Poppins, system-ui, sans-serif';
+  g.fillStyle = '#ffd36b'; g.font = `700 64px ${F}`; g.textAlign = 'center'; g.fillText(S.perfil.nome ? 'A evolução de ' + S.perfil.nome : 'A evolução do meu bebê', W / 2, 105);
+  g.fillStyle = '#c9d0ea'; g.font = `400 32px ${F}`; g.fillText(idadeNaFoto(sel[0].ts).curto + '  →  ' + idadeNaFoto(sel[n - 1].ts).curto, W / 2, 152);
+  for (let k = 0; k < n; k++) {
+    const f = sel[k], x = pad + (k % cols) * (cell + pad), y = top + Math.floor(k / cols) * (cell + pad);
+    const bmp = await createImageBitmap(f.blob), s = Math.max(cell / bmp.width, cell / bmp.height), w = bmp.width * s, h = bmp.height * s;
+    g.save(); g.beginPath(); g.roundRect ? g.roundRect(x, y, cell, cell, 28) : g.rect(x, y, cell, cell); g.clip();
+    g.drawImage(bmp, x + (cell - w) / 2, y + (cell - h) / 2, w, h);
+    const lg = g.createLinearGradient(0, y + cell * .6, 0, y + cell); lg.addColorStop(0, '#0000'); lg.addColorStop(1, '#000a'); g.fillStyle = lg; g.fillRect(x, y, cell, cell); g.restore();
+    g.fillStyle = '#fff'; g.font = `700 ${cols === 3 ? 34 : 46}px ${F}`; g.textAlign = 'left'; g.fillText(idadeNaFoto(f.ts).curto, x + 22, y + cell - 24);
+  }
+  g.fillStyle = '#a9b3d6'; g.font = `600 28px ${F}`; g.textAlign = 'center'; g.fillText('🌙 Noite Tranquila · Chef Nanna', W / 2, H - 50);
+  const blob = await new Promise(r => c.toBlob(r, 'image/jpeg', .9)), nome = 'evolucao_' + (S.perfil.nome || 'bebe').replace(/\W+/g, '_') + '.jpg';
+  const file = new File([blob], nome, { type: 'image/jpeg' });
+  try { if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], title: 'A evolução de ' + nomeBebe() }); return; } } catch (e) { if (e.name === 'AbortError') return; }
+  baixarBlob(blob, nome); toast('Montagem salva nos downloads 🖼️');
+}
+
+/* ---------- lembrete na tela inicial ---------- */
+routes.inicio.after = async () => {
+  const box = $('#homeFoto'); if (!box) return;
+  const fotos = await FotoDB.all(), ult = fotos[fotos.length - 1];
+  if (!ult || Date.now() - ult.ts > 6.5 * 864e5) {
+    box.innerHTML = `<a class="card row" href="#album" style="text-decoration:none;color:inherit;border-color:#ff8fab66"><div style="font-size:30px">📸</div><div style="flex:1"><h3>Foto da semana d${S.perfil.nome ? 'e ' + esc(S.perfil.nome) : 'o bebê'}</h3><div class="small muted">${fotos.length ? 'Já faz ' + Math.floor((Date.now() - ult.ts) / 864e5) + ' dias da última foto. Vamos registrar esta semana?' : 'Comece o álbum de evolução hoje. Uma foto por semana!'}</div></div><span class="go">›</span></a>`;
+  } else {
+    limparURLs(); const ult3 = fotos.slice(-4).reverse();
+    box.innerHTML = `<div class="sec" style="margin-top:4px"><h3>Álbum de evolução</h3><a href="#album">Ver tudo</a></div><div class="fstrip">${ult3.map(f => `<a href="#foto/${f.id}"><img src="${urlDe(f)}" alt=""><span>${esc(idadeNaFoto(f.ts).curto)}</span></a>`).join('')}</div>`;
+  }
+};
+
+window.addEventListener('hashchange', () => { if (!location.hash.startsWith('#evolucao')) { const e = $('#evo'); if (e) { clearInterval(evoIv); e.remove(); document.body.style.overflow = ''; } } });
+applyTheme(); render(); updMini();
+</script>
+</body>
+</html>

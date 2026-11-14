@@ -1,0 +1,14 @@
+NOITE TRANQUILA - App da Chef Nanna (PWA)
+
+COMO PUBLICAR NA VERCEL (5 min)
+1. Crie um repositório novo no GitHub (ex.: noite-tranquila) e suba TODOS os arquivos desta pasta.
+2. Na Vercel: Add New > Project > importe o repositório > Deploy (sem configurar nada).
+3. O link fica tipo https://noite-tranquila.vercel.app. Esse é o link que vai na entrega do upsell (WhatsApp).
+
+COMO A CLIENTE INSTALA
+- iPhone: abrir no Safari > Compartilhar > "Adicionar à Tela de Início".
+- Android: abrir no Chrome > 3 pontinhos > "Instalar app".
+Depois de aberto uma vez, funciona sem internet.
+
+ARQUIVOS
+index.html (app inteiro), manifest.webmanifest, sw.js (modo offline), ícones, vercel.json.
